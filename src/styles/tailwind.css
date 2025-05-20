@@ -4,8 +4,39 @@
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
-@theme {
-  /* Her tilføjes theme variable // tokens */
+@plugin "daisyui/theme" {
+  name: "themeV1";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(95% 0 0);
+  --color-base-300: oklch(90% 0 0);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: oklch(89% 0.196 126.665);
+  --color-primary-content: oklch(14.354% 0.026 239.443);
+  --color-secondary: oklch(42% 0.199 265.638);
+  --color-secondary-content: oklch(98% 0.001 106.423);
+  --color-accent: oklch(90% 0.182 98.111);
+  --color-accent-content: oklch(18.845% 0.037 105.306);
+  --color-neutral: oklch(98% 0.001 106.423);
+  --color-neutral-content: oklch(21% 0.006 285.885);
+  --color-info: oklch(87% 0.15 154.449);
+  --color-info-content: oklch(13.695% 0.018 217.284);
+  --color-success: oklch(82% 0.12 346.018);
+  --color-success-content: oklch(21% 0.006 285.885);
+  --color-warning: oklch(75% 0.183 55.934);
+  --color-warning-content: oklch(14.247% 0.031 52.023);
+  --color-error: oklch(70% 0.191 22.216);
+  --color-error-content: oklch(21% 0.006 285.885);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }
 
 @layer base {
