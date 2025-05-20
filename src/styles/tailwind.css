@@ -6,6 +6,12 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
+
+
+
+   /* Costum theme fonts */
+   --font-heading: "Fraunces", serif;
+   --font-body: "Chivo", sans-serif;
 }
 
 @layer base {
