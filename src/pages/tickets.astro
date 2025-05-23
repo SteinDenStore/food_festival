@@ -7,18 +7,163 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Tickets">
-  <article>
-    <h1>Tickets overskrift</h1>
-    <Button>Klik!</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-    <Image src={thumbsup} alt="" />
-  </article></MainLayout
+  
+    <section class="bg-neutral-100 py-6 px-4 text-center space-y-4">
+      <!-- Image and Heading -->
+      <div class="relative rounded-lg overflow-hidden">
+        <img src="/ticketspage/ticketimg.webp" alt="Tickets" class="w-full object-cover" />
+        <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl font-bold drop-shadow-md">
+          Tickets
+        </h1>
+      </div>
+    
+      <!-- Description Text -->
+      <p class="text-sm text-teal-900 max-w-md mx-auto space-y-1">
+        The ticket gives access to the entire festival site.<br />
+        So eat your way through <strong>7 festival areas</strong>, take part in a host of
+        <strong>free workshops</strong>, <strong>free show kitchens</strong> and much more!<br />
+        There are few activities that cost an additional price.<br />
+        <span class="font-semibold">ATTENTION.</span> Save money - buy your ticket in presale.
+      </p>
+    </section>
+
+   <section>
+
+      <!-- Standard Section -->
+      <div class="bg-teal-50 p-6 rounded-2xl shadow-lg w-80">
+        <!-- Standard Section -->
+        <h2 class="text-center text-2xl font-bold text-teal-900 mb-4">Standard</h2>
+        <div class="space-y-3 mb-6">
+          <div class="flex justify-between items-center border-b pb-1">
+            <span class="font-semibold text-teal-900">Weekend</span>
+            <div class="flex items-center space-x-2 text-sm">
+              <span>170 kr</span>
+              <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
+              <span>0</span>
+              <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+            </div>
+          </div>
+          <div class="flex justify-between items-center border-b pb-1">
+            <span class="font-semibold text-teal-900">Friday</span>
+            <div class="flex items-center space-x-2 text-sm">
+              <span>110 kr</span>
+              <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
+              <span>0</span>
+              <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+            </div>
+          </div>
+          <div class="flex justify-between items-center border-b pb-1">
+            <span class="font-semibold text-teal-900">Saturday</span>
+            <div class="flex items-center space-x-2 text-sm">
+              <span>110 kr</span>
+              <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
+              <span>0</span>
+              <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+            </div>
+          </div>
+          <div class="flex justify-between items-center border-b pb-1">
+            <span class="font-semibold text-teal-900">Sunday</span>
+            <div class="flex items-center space-x-2 text-sm">
+              <span>110 kr</span>
+              <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
+              <span>0</span>
+              <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+            </div>
+          </div>
+        </div>
+
+      <!-- Discounted Section -->
+      <h2 class="text-center text-2xl font-bold text-teal-900">Discounted</h2>
+      <p class="text-center text-xs text-gray-600 mb-4">*Early bird, pensioner/student</p>
+      <div class="space-y-3 mb-6">
+        <div class="flex justify-between items-center border-b pb-1">
+          <span class="font-semibold text-teal-900">Weekend</span>
+          <div class="flex items-center space-x-2 text-sm">
+            <span>130 kr</span>
+            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
+            <span>0</span>
+            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center border-b pb-1">
+          <span class="font-semibold text-teal-900">Friday</span>
+          <div class="flex items-center space-x-2 text-sm">
+            <span>80 kr</span>
+            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
+            <span>0</span>
+            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center border-b pb-1">
+          <span class="font-semibold text-teal-900">Saturday</span>
+          <div class="flex items-center space-x-2 text-sm">
+            <span>80 kr</span>
+            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
+            <span>0</span>
+            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center border-b pb-1">
+          <span class="font-semibold text-teal-900">Sunday</span>
+          <div class="flex items-center space-x-2 text-sm">
+            <span>80 kr</span>
+            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
+            <span>0</span>
+            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center border-b pb-1">
+          <span class="font-semibold text-teal-900">Kids 10 & under</span>
+          <div class="flex items-center space-x-2 text-sm">
+            <span>Free</span>
+            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
+            <span>0</span>
+            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-xl font-bold text-teal-900">
+        TOTAL <span class="text-orange-500">0.00 KR</span>
+      </div>
+      <button class="w-full mt-4 bg-orange-400 text-white font-bold py-2 rounded-full">
+        Proceed to payment
+      </button>
+    </div>
+  </section> 
+
+   <section class="bg-neutral-100 py-6 px-4 space-y-6">
+
+    <!-- Terms for online purchase -->
+    <div class="bg-emerald-300 p-4 rounded-2xl space-y-2">
+      <div>
+        <img src="/ticketspage/terms.webp" alt="Terms Icon" class="w-10 h-10" />
+      </div>
+      <h3 class="text-lg font-bold text-white">Terms for<br />online purchase</h3>
+      <p class="text-white text-sm">
+        The option to buy a day ticket at the pre-sale price online expires at 00:00 the day before.
+        For example, if you want to buy a day ticket for Sunday, you need to buy the ticket on
+        Saturday before 23:59 to get the pre-sale price.
+      </p>
+    </div>
+  
+    <!-- Exchange Tickets -->
+    <div class="bg-emerald-300 p-4 rounded-2xl space-y-2">
+      <div>
+        <img src="/ticketspage/exchange.webp" alt="Exchange Icon" class="w-10 h-10" />
+      </div>
+      <h3 class="text-lg font-bold text-white">Exchange Tickets</h3>
+      <p class="text-white text-sm">
+        You can exchange your day ticket for a weekend ticket for only DKK 75 in the Information Center at Tangkrogen.
+      </p>
+    </div>
+  </section>
+
+   <section>
+    <h2>Festival Map</h2>
+    <div><img src="/ticketspage/festivalmap.webp" alt=""></div>
+    <div><img src="ticketspage/mapinfo.webp" alt=""></div>
+   </section>
+
+ </MainLayout
 >
-<script>
-  /* Import af Motion One bibliotek */
-  import { animate, stagger, inView, scroll } from "motion";
-</script>
+
