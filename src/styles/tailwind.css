@@ -1,10 +1,10 @@
 @import "tailwindcss";
-@plugin "daisyui";
+/* @plugin "daisyui"; */
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
-@plugin "daisyui/theme" {
+/* @plugin "daisyui/theme" {
   name: "themeV1";
   default: false;
   prefersdark: false;
@@ -37,7 +37,7 @@
   --border: 1px;
   --depth: 0;
   --noise: 0;
-}
+} */
 
 @theme {
   /* Her tilføjes theme variable // tokens */

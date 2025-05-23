@@ -7,18 +7,125 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Home">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-    <Image src={thumbsup} alt="" />
+  <article class="max-w-[352px] lg:max-w-[1260px] mx-auto [&_section]:mt-10
+  [&_h1]:font-heading [&_h2]:font-heading [&_h3]:font-heading [&_h4]:font-heading [&_p]:font-body">
+    <!-- start short about -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div>
+        <img src="/indexpics/entrance.webp" alt="fesrtival_entrance"
+        class="rounded-lg col-span-2">
+      </div>
+      <div>
+        <h3 class="font-bold">A Weekend of Flavors, <br>Fun & Food Experiences</h3>
+        <p>Join us for three unforgettable days of food, inspiration, and family fun at Tangkrogen in Aarhus. Every year, we welcome 30,000 guests to Denmark’s biggest food mecca — a celebration for anyone who loves great food.
+          Discover an exciting program filled with workshops, talks, passionate producers, local businesses, and headline events like the Danish Hotdog Championship, Danish BBQ Championship, and Cocktail of the Year.
+          See you at Food Festival 2025!</p>
+        <Button variant="primary" size="medium"><a href="/aboutUs">Read more</a></Button>
+      </div>
+    </section>
+    <!-- end short about -->
+
+    <!-- start tickets -->
+    <section>
+      <div>
+        <h3 class="font-bold">Tickets</h3>
+        <p>The ticket gives access to the entire festival site. So eat your way through 7 festival areas, take part in a host of free workshops, free show kitchens and much more!</p>
+      </div>
+      <!-- TICKET COMPONENTS GOES HERE -->
+    </section>
+    <!-- end tickets -->
+     
+    <!-- start program -->
+    <section>
+      <div>
+        <h3 class="font-bold">Featured events</h3>
+      <!-- PROGRAM COMPONENTS GOES HERE -->
+      </div>
+      <Button variant="primary" size="medium"><a href="/program">View full program</a></Button>
+    </section>
+    <!-- end program -->
+
+    <!-- start parters -->
+      <h3 class="font-bold">Partners</h3>
+      <div class="flex flex-wrap gap-3">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+      </div>
+    <!-- end parters -->
+
+
+
+
   </article>
 </MainLayout>
 <script>
   /* Import af Motion One bibliotek */
   import { animate, stagger, inView, scroll } from "motion";
 </script>
+
+
+<style>
+	h1{
+    font-size: 40px;
+}
+	h2{
+	font-size: 32px;
+}
+	h3{
+	font-size: 24px;
+}
+	h4{
+	font-size: 18px;
+}
+	p{
+	font-size: 16px;
+}
+	@media (min-width: 640px) {
+		/* Small devices (phones, 640px and up) */
+		h1{
+			font-size: 2.5rem;
+		}
+		h2{
+			font-size: 2rem;
+		}
+		h3{
+			font-size: 1.75rem;
+		}
+		h4{
+			font-size: 1.5rem;
+		}
+		h5{
+			font-size: 1.25rem;
+		}
+		h6{
+			font-size: 1rem;
+		}
+	}
+</style>
