@@ -1,0 +1,33 @@
+---
+const {url="#", image="", imagealt="", title="", text="", location="" , time="" , time2=""
+, badgenew="false", badgesale="false", badgefewleft="false"} = Astro.props;
+---
+
+<a href={url} class="hover:opacity-50 transition duration-300 ease-in-out">
+    <div class="list-element flex flex-col gap-4 mt-10">
+        <div class="flex gap-4 items-start">
+            <img src={image} alt={imagealt} class="w-20 h-20 rounded-xl"/>
+            <div>
+                <h4 class="text-xs font-bold font-heading">{title}</h4>
+                <p class="text-[10px]">{time}</p>
+                <p class="text-[10px]">{time2}</p>
+                <div class="flex gap-2">
+                    <img src="/events/location_pin.svg" alt="location_pin">
+                    <p class="text-[10px] font-bold">{location}</p>
+                </div>
+            </div>
+        </div>
+        <p>{text}</p>
+    <div class="border-b-1 border-orange-400"></div>
+    </div>
+</a>
+
+<style>
+    h4 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+</style>

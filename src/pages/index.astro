@@ -1,29 +1,33 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import ListElement from "../components/ListElement.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Home">
-  <article class="max-w-[352px] lg:max-w-[1260px] mx-auto [&_section]:mt-10
+  <article class="max-w-[352px] lg:max-w-[1260px] mx-auto [&_section]:mt-20 text-[#00415F]
   [&_h1]:font-heading [&_h2]:font-heading [&_h3]:font-heading [&_h4]:font-heading [&_p]:font-body">
-    <!-- start short about -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    
+
+  <!-- start short about -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12">
       <div>
         <img src="/indexpics/entrance.webp" alt="fesrtival_entrance"
         class="rounded-lg col-span-2">
       </div>
       <div>
         <h3 class="font-bold">A Weekend of Flavors, <br>Fun & Food Experiences</h3>
-        <p>Join us for three unforgettable days of food, inspiration, and family fun at Tangkrogen in Aarhus. Every year, we welcome 30,000 guests to Denmark’s biggest food mecca — a celebration for anyone who loves great food.
+        <p class="my-4">Join us for three unforgettable days of food, inspiration, and family fun at Tangkrogen in Aarhus. Every year, we welcome 30,000 guests to Denmark’s biggest food mecca — a celebration for anyone who loves great food.
           Discover an exciting program filled with workshops, talks, passionate producers, local businesses, and headline events like the Danish Hotdog Championship, Danish BBQ Championship, and Cocktail of the Year.
           See you at Food Festival 2025!</p>
         <Button variant="primary" size="medium"><a href="/aboutUs">Read more</a></Button>
       </div>
     </section>
     <!-- end short about -->
+
 
     <!-- start tickets -->
     <section>
@@ -35,17 +39,49 @@ import thumbsup from "../assets/images/thumbsup.png";
     </section>
     <!-- end tickets -->
      
+    
     <!-- start program -->
     <section>
-      <div>
-        <h3 class="font-bold">Featured events</h3>
-      <!-- PROGRAM COMPONENTS GOES HERE -->
+      <div class="px-8 py-6 bg-orange-100 rounded-lg mb-4">
+        <h3 class="font-bold mb-4">Featured events</h3>
+        <ListElement
+          url="/program"
+          image="/events/cocktail.png"
+          imagealt="cocktail_event"
+          title="Cocktail of the Year"
+          text="For the third year in a row, Food Festival invites six of Denmark's best winemakers and distilleries to a festive competition to create the best new cocktail."
+          location="Guild Hall"
+          time="Saturday 12:00 PM - 3:00 PM"
+        ></ListElement>
+
+        <ListElement
+          url="/program"
+          image="/events/grill.png"
+          imagealt="grill_event"
+          title="DM in Grill"
+          text="The competition will be fierce when the Food Festival will find Denmark's best grill champion when 19 teams compete for the honorable title 'Danish Grill Champion'."
+          location="Dining Hall"
+          time="Saturday 10:00 PM - 19:00 PM"
+          time2="Sunday 10:00 PM - 17:00 PM"
+        ></ListElement>
+
+        <ListElement
+          url="/program"
+          image="/events/hotdog.png"
+          imagealt="hotdog_event"
+          title="Hotdog DM 2024"
+          text="Welcome to Denmark's wildest display of gastronomic creativity! 12 of the country's most inventive restaurants compete to serve the best reinterpretation of the national classic."
+          location="The Entrepreneurship"
+          time="Sunday 12.00 - 16.00"
+        ></ListElement>
       </div>
       <Button variant="primary" size="medium"><a href="/program">View full program</a></Button>
     </section>
     <!-- end program -->
 
+
     <!-- start parters -->
+    <section class="">
       <h3 class="font-bold">Partners</h3>
       <div class="flex flex-wrap gap-3">
         <img src="https://picsum.photos/id/237/70/70" alt="">
@@ -76,8 +112,8 @@ import thumbsup from "../assets/images/thumbsup.png";
         <img src="https://picsum.photos/id/237/70/70" alt="">
         <img src="https://picsum.photos/id/237/70/70" alt="">
         <img src="https://picsum.photos/id/237/70/70" alt="">
-
       </div>
+    </section>
     <!-- end parters -->
 
 
@@ -92,6 +128,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 
 <style>
+  
 	h1{
     font-size: 40px;
 }
@@ -110,22 +147,19 @@ import thumbsup from "../assets/images/thumbsup.png";
 	@media (min-width: 640px) {
 		/* Small devices (phones, 640px and up) */
 		h1{
-			font-size: 2.5rem;
+			font-size: 48px;
 		}
 		h2{
-			font-size: 2rem;
+			font-size: 38px;
 		}
 		h3{
-			font-size: 1.75rem;
+			font-size: 32px;
 		}
 		h4{
-			font-size: 1.5rem;
+			font-size: 28px;
 		}
-		h5{
-			font-size: 1.25rem;
-		}
-		h6{
-			font-size: 1rem;
+		p{
+			font-size: 18px;
 		}
 	}
 </style>
