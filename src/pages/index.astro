@@ -8,9 +8,108 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Home">
-  <article class="max-w-[352px] lg:max-w-[1260px] mx-auto [&_section]:mt-20 text-[#00415F]
+
+  <article class="[&_section]:mt-20 text-[#00415F]
   [&_h1]:font-heading [&_h2]:font-heading [&_h3]:font-heading [&_h4]:font-heading [&_p]:font-body">
-    
+  <!-- start food banner -->
+    <section class="overflow-x-hidden max-w-screen grid grid-rows-1 grid-cols-1">
+
+      <div class="cta mx-auto my-auto place-content-center text-center row-span-1 col-span-1 lg:w-167 lg:h-167 rounded-full bg-green-900">
+        <h1 class="font-body lg:text-xl text-white">Welcome to</h1>
+        <h2 class="my-4 lg:text-6xl font-bold text-white">Denmark's <br> largest annual <br> food celebration</h2>
+        <h3 class="font-body text-2xl text-white">September 5 - 7, 2025 <br> at Tangkrogen in Aarhus</h3>
+        <Button>Get tickets</Button>
+        <Button>View program</Button>
+      </div>
+
+      <div class="container z-1 row-span-1 col-span-1">
+        <div class="whitespace-nowrap">
+          <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60">
+              <div class="flex gap-4">
+                <img src="/herofood/food1.webp" alt="">
+                <img src="/herofood/food2.webp" alt="">
+                <img src="/herofood/food3.webp" alt="">
+                <img src="/herofood/food4.webp" alt="">
+                <img src="/herofood/food5.webp" alt="">
+              </div>
+          </div>
+          <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60" aria-hidden="true">
+              <div class="flex gap-4">
+                <img src="/herofood/food1.webp" alt="">
+                <img src="/herofood/food2.webp" alt="">
+                <img src="/herofood/food3.webp" alt="">
+                <img src="/herofood/food4.webp" alt="">
+                <img src="/herofood/food5.webp" alt="">
+              </div>
+          </div>
+        </div>
+  
+        <div class="whitespace-nowrap">
+            <div class="inline-block animate-food-scroll-right whitespace-nowrap [&_img]:mx-10 [&_img]:my-10 [&_img]:max-w-60">
+                <div class="flex gap-4">
+                  <img src="/herofood/food6.webp" alt="">
+                  <img src="/herofood/food7.webp" alt="">
+                  <img src="/herofood/food8.webp" alt="">
+                  <img src="/herofood/food9.webp" alt="">
+                  <img src="/herofood/food10.webp" alt="">
+                </div>
+            </div>
+            <div class="inline-block animate-food-scroll-right whitespace-nowrap [&_img]:mx-10 [&_img]:my-10 [&_img]:max-w-60" aria-hidden="true">
+                <div class="flex gap-4">
+                  <img src="/herofood/food6.webp" alt="">
+                  <img src="/herofood/food7.webp" alt="">
+                  <img src="/herofood/food8.webp" alt="">
+                  <img src="/herofood/food9.webp" alt="">
+                  <img src="/herofood/food10.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="whitespace-nowrap">
+            <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60">
+                <div class="flex gap-4">
+                  <img src="/herofood/food11.webp" alt="">
+                  <img src="/herofood/food12.webp" alt="">
+                  <img src="/herofood/food5.webp" alt="">
+                  <img src="/herofood/food14.webp" alt="">
+                  <img src="/herofood/food4.webp" alt="">
+                </div>
+            </div>
+            <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60" aria-hidden="true">
+                <div class="flex gap-4">
+                  <img src="/herofood/food11.webp" alt="">
+                  <img src="/herofood/food12.webp" alt="">
+                  <img src="/herofood/food5.webp" alt="">
+                  <img src="/herofood/food14.webp" alt="">
+                  <img src="/herofood/food4.webp" alt="">
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </section>
+  <!-- end food banner -->
+
+  <!-- start banner -->
+    <div class="whitespace-nowrap overflow-x-hidden bg-green-700 text-white py-4 max-w-screen">
+      <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-10 text-2xl font-body font-bold">
+          <span>Delicious tastings</span>
+          <span>250 unique food experiences</span>
+          <span>Most important chefs</span>
+          <span>+ 30,000 happy festival goers</span>
+          <span>+ 250 dedicated food artisans & companies </span>
+      </div>
+      <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-10 text-2xl font-body font-bold" aria-hidden="true">
+          <span>Delicious tastings</span>
+          <span>250 unique food experiences</span>
+          <span>Most important chefs</span>
+          <span>+ 30,000 happy festival goers</span>
+          <span>+ 250 dedicated food artisans & companies </span>
+      </div>
+    </div>
+  <!-- end banner -->
+
+  <div class=" container max-w-[352px] lg:max-w-[1260px] mx-auto">
 
   <!-- start short about -->
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12">
@@ -116,6 +215,7 @@ import thumbsup from "../assets/images/thumbsup.png";
     </section>
     <!-- end parters -->
 
+  </div>
 
 
 
@@ -127,7 +227,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 </script>
 
 
-<style>
+<!-- <style>
   
 	h1{
     font-size: 40px;
@@ -162,4 +262,4 @@ import thumbsup from "../assets/images/thumbsup.png";
 			font-size: 18px;
 		}
 	}
-</style>
+</style> -->

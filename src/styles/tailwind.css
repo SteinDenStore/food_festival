@@ -45,6 +45,32 @@
   /* Costum theme fonts */
   --font-heading: "Fraunces", serif;
   --font-body: "Chivo", sans-serif;
+
+
+	/*Infinite scroll animation*/
+	--animate-infinite-scroll: infinite-scroll 25s linear infinite;  
+
+	@keyframes infinite-scroll {    
+	from { transform: translateX(0);}    
+	to { transform: translateX(-100%);}  
+	}
+
+	/*Food scroll left animation*/
+	--animate-food-scroll-left: food-scroll-left 15s linear infinite;  
+
+	@keyframes food-scroll-left {    
+	from { transform: translateX(0);}    
+	to { transform: translateX(-100%);}  
+	}
+
+	/*Food scroll right animation*/
+	--animate-food-scroll-right: food-scroll-right 15s linear infinite;  
+
+	@keyframes food-scroll-right {    
+	from { transform: translateX(-100%);}    
+	to { transform: translateX(0);}  
+	}
+
 }
 
 @layer base {
@@ -62,7 +88,7 @@
 @layer utilities {
 }
 
-h1{
+/* h1{
 font-size: 40px;
 }
 h2{
@@ -78,7 +104,7 @@ p{
 font-size: 16px;
 }
 @media (min-width: 640px) {
-  /* Small devices (phones, 640px and up) */
+
   h1{
     font-size: 48px;
   }
@@ -94,4 +120,4 @@ font-size: 16px;
   p{
     font-size: 18px;
   }
-}
+} */
