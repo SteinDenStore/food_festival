@@ -1,0 +1,67 @@
+---
+const {url="#", image="", imagealt="", title="", text="", location="" , time="" , time2=""
+, badgenew="false", badgesale="false", badgefewleft="false"} = Astro.props;
+---
+
+<!-- mobile version -->
+<a href={url} class="hover:opacity-50 transition duration-300 ease-in-out lg:hidden">
+    <div class="list-element flex flex-col gap-4 mt-10">
+        <div class="flex gap-4 items-start">
+            <img src={image} alt={imagealt} class="w-20 h-20 rounded-xl"/>
+            <div>
+                <h4 class="text-xs font-bold font-heading">{title}</h4>
+                <p class="text-[10px]">{time}</p>
+                <p class="text-[10px]">{time2}</p>
+                <div class="flex gap-2">
+                    <img src="/events/location_pin.svg" alt="location_pin">
+                    <p class="text-[10px] font-bold">{location}</p>
+                </div>
+            </div>
+        </div>
+        <p>{text}</p>
+    <div class="border-b-1 border-orange-400"></div>
+    </div>
+</a>
+
+<!-- desktop version -->
+<a href={url} class="hover:opacity-50 transition duration-300 ease-in-out hidden lg:block">
+    <div class="list-element flex flex-col gap-4 mt-10">
+        <div class="flex gap-20 items-start">
+            <img src={image} alt={imagealt} class="w-40 h-40 rounded-xl"/>
+            <div>
+                <h4 class="text-xs font-bold font-heading">{title}</h4>
+                <p class="max-w-125">{text}</p>
+            </div>
+            <div class="w-60">
+                <p class="">{time}</p>
+                <p class="">{time2}</p>
+                <div class="flex gap-2">
+                    <img src="/events/location_pin.svg" alt="location_pin">
+                    <p class="text-[10px] font-bold">{location}</p>
+                </div>
+            </div>
+        </div>
+    <div class="border-b-1 border-orange-400"></div>
+    </div>
+</a>
+
+
+<style>
+    h4 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    @media (min-width: 1024px) {
+        h4 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    }
+</style>
