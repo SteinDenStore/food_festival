@@ -1,24 +1,273 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import ListElement from "../components/ListElement.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Home">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-    <Image src={thumbsup} alt="" />
+
+  <article class="[&_section]:mt-20 text-[#00415F]
+  [&_h1]:font-heading [&_h2]:font-heading [&_h3]:font-heading [&_h4]:font-heading [&_p]:font-body">
+  <!-- start food banner -->
+    <section class="overflow-x-hidden max-w-screen grid grid-rows-1 grid-cols-1 ">
+
+      <div class="col-start-1 row-start-1 row-span-1 col-span-1">
+        <div class="container col-start-1 row-start-1 row-span-1 col-span-1">
+          <div class="whitespace-nowrap">
+            <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60">
+                <div class="flex gap-4">
+                  <img src="/herofood/food1.webp" alt="">
+                  <img src="/herofood/food2.webp" alt="">
+                  <img src="/herofood/food3.webp" alt="">
+                  <img src="/herofood/food4.webp" alt="">
+                  <img src="/herofood/food5.webp" alt="">
+                </div>
+            </div>
+            <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60" aria-hidden="true">
+                <div class="flex gap-4">
+                  <img src="/herofood/food1.webp" alt="">
+                  <img src="/herofood/food2.webp" alt="">
+                  <img src="/herofood/food3.webp" alt="">
+                  <img src="/herofood/food4.webp" alt="">
+                  <img src="/herofood/food5.webp" alt="">
+                </div>
+            </div>
+          </div>
+    
+          <div class="whitespace-nowrap">
+              <div class="inline-block animate-food-scroll-right whitespace-nowrap [&_img]:mx-10 [&_img]:my-10 [&_img]:max-w-60">
+                  <div class="flex gap-4">
+                    <img src="/herofood/food6.webp" alt="">
+                    <img src="/herofood/food7.webp" alt="">
+                    <img src="/herofood/food8.webp" alt="">
+                    <img src="/herofood/food9.webp" alt="">
+                    <img src="/herofood/food10.webp" alt="">
+                  </div>
+              </div>
+              <div class="inline-block animate-food-scroll-right whitespace-nowrap [&_img]:mx-10 [&_img]:my-10 [&_img]:max-w-60" aria-hidden="true">
+                  <div class="flex gap-4">
+                    <img src="/herofood/food6.webp" alt="">
+                    <img src="/herofood/food7.webp" alt="">
+                    <img src="/herofood/food8.webp" alt="">
+                    <img src="/herofood/food9.webp" alt="">
+                    <img src="/herofood/food10.webp" alt="">
+                  </div>
+              </div>
+          </div>
+  
+          <div class="whitespace-nowrap">
+              <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60">
+                  <div class="flex gap-4">
+                    <img src="/herofood/food11.webp" alt="">
+                    <img src="/herofood/food12.webp" alt="">
+                    <img src="/herofood/food5.webp" alt="">
+                    <img src="/herofood/food14.webp" alt="">
+                    <img src="/herofood/food4.webp" alt="">
+                  </div>
+              </div>
+              <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60" aria-hidden="true">
+                  <div class="flex gap-4">
+                    <img src="/herofood/food11.webp" alt="">
+                    <img src="/herofood/food12.webp" alt="">
+                    <img src="/herofood/food5.webp" alt="">
+                    <img src="/herofood/food14.webp" alt="">
+                    <img src="/herofood/food4.webp" alt="">
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-start-1 row-start-1 row-span-1 col-span-1 my-auto z-1">
+      <div class="cta mx-auto my-auto place-content-center text-center col-start-1 row-start-1 row-span-1 col-span-1 lg:w-167 lg:h-167 rounded-full bg-green-900">
+        <h1 class="font-body lg:text-xl text-white">Welcome to</h1>
+        <h2 class="my-4 lg:text-6xl font-bold text-white">Denmark's <br> largest annual <br> food celebration</h2>
+        <h3 class="font-body text-2xl text-white">September 5 - 7, 2025 <br> at Tangkrogen in Aarhus</h3>
+        <div class="felx justify-center gap-10 mt-6">
+          <Button>Get tickets</Button>
+          <Button>View program</Button>
+        </div>
+      </div>
+    </div>
+
+    
+
+    </section>
+  <!-- end food banner -->
+
+  <!-- start banner -->
+    <div class="whitespace-nowrap overflow-x-hidden bg-green-700 text-white py-4 max-w-screen">
+      <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-10 text-2xl font-body font-bold">
+          <span>Delicious tastings</span>
+          <span>250 unique food experiences</span>
+          <span>Most important chefs</span>
+          <span>+ 30,000 happy festival goers</span>
+          <span>+ 250 dedicated food artisans & companies </span>
+      </div>
+      <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-10 text-2xl font-body font-bold" aria-hidden="true">
+          <span>Delicious tastings</span>
+          <span>250 unique food experiences</span>
+          <span>Most important chefs</span>
+          <span>+ 30,000 happy festival goers</span>
+          <span>+ 250 dedicated food artisans & companies </span>
+      </div>
+    </div>
+  <!-- end banner -->
+
+  <div class=" container max-w-[352px] lg:max-w-[1260px] mx-auto">
+
+  <!-- start short about -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12">
+      <div>
+        <img src="/indexpics/entrance.webp" alt="fesrtival_entrance"
+        class="rounded-2xl  col-span-2">
+      </div>
+      <div>
+        <h3 class="font-bold text-">A Weekend of Flavors, <br>Fun & Food Experiences</h3>
+        <p class="my-4">Join us for three unforgettable days of food, inspiration, and family fun at Tangkrogen in Aarhus. Every year, we welcome 30,000 guests to Denmark’s biggest food mecca — a celebration for anyone who loves great food.
+          Discover an exciting program filled with workshops, talks, passionate producers, local businesses, and headline events like the Danish Hotdog Championship, Danish BBQ Championship, and Cocktail of the Year.
+          See you at Food Festival 2025!</p>
+        <Button variant="primary" size="medium"><a href="/aboutUs">Read more</a></Button>
+      </div>
+    </section>
+    <!-- end short about -->
+
+
+    <!-- start tickets -->
+    <section>
+      <div>
+        <h3 class="font-bold">Tickets</h3>
+        <p>The ticket gives access to the entire festival site. So eat your way through 7 festival areas, take part in a host of free workshops, free show kitchens and much more!</p>
+      </div>
+      <!-- TICKET COMPONENTS GOES HERE -->
+    </section>
+    <!-- end tickets -->
+     
+    
+    <!-- start program -->
+    <section>
+      <div class="px-8 py-6 bg-orange-100 rounded-lg mb-4 lg:rounded-3xl">
+        <h3 class="font-bold mb-4">Featured events</h3>
+        <ListElement
+          url="/program"
+          image="/events/cocktail.png"
+          imagealt="cocktail_event"
+          title="Cocktail of the Year"
+          text="For the third year in a row, Food Festival invites six of Denmark's best winemakers and distilleries to a festive competition to create the best new cocktail."
+          location="Guild Hall"
+          time="Saturday 18:00 - 20:00"
+        ></ListElement>
+
+        <ListElement
+          url="/program"
+          image="/events/grill.png"
+          imagealt="grill_event"
+          title="DM in Grill"
+          text="The competition will be fierce when the Food Festival will find Denmark's best grill champion when 19 teams compete for the honorable title 'Danish Grill Champion'."
+          location="Dining Hall"
+          time="Saturday 10:00 - 19:00"
+          time2="Sunday 10:00 - 17:00"
+        ></ListElement>
+
+        <ListElement
+          url="/program"
+          image="/events/hotdog.png"
+          imagealt="hotdog_event"
+          title="Hotdog DM 2024"
+          text="Welcome to Denmark's wildest display of gastronomic creativity! 12 of the country's most inventive restaurants compete to serve the best reinterpretation of the national classic."
+          location="The Entrepreneurship"
+          time="Sunday 12.00 - 16.00"
+        ></ListElement>
+      </div>
+      <Button variant="primary" size="medium"><a href="/program">View full program</a></Button>
+    </section>
+    <!-- end program -->
+
+
+    <!-- start parters -->
+    <section class="">
+      <h3 class="font-bold">Partners</h3>
+      <div class="flex flex-wrap gap-3">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+        <img src="https://picsum.photos/id/237/70/70" alt="">
+      </div>
+    </section>
+    <!-- end parters -->
+
+  </div>
+
+
+
   </article>
 </MainLayout>
 <script>
   /* Import af Motion One bibliotek */
   import { animate, stagger, inView, scroll } from "motion";
 </script>
+
+
+<!-- <style>
+  
+	h1{
+    font-size: 40px;
+}
+	h2{
+	font-size: 32px;
+}
+	h3{
+	font-size: 24px;
+}
+	h4{
+	font-size: 18px;
+}
+	p{
+	font-size: 16px;
+}
+	@media (min-width: 640px) {
+		/* Small devices (phones, 640px and up) */
+		h1{
+			font-size: 48px;
+		}
+		h2{
+			font-size: 38px;
+		}
+		h3{
+			font-size: 32px;
+		}
+		h4{
+			font-size: 28px;
+		}
+		p{
+			font-size: 18px;
+		}
+	}
+</style> -->
