@@ -7,18 +7,28 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="About Us">
-  <img
-    class="center mx-auto lg:max-w-[1260px] max-w-[352px]"
-    src="https://picsum.photos/1260/200"
-    alt="placeholder"
-  />
-  <article class="mt-50 lg:max-w-[1260px] max-w-[352px] mx-auto">
+  <article class="lg:max-w-[1260px] max-w-[352px] mx-auto">
+    <!-- Image and Heading -->
+    <div class="relative rounded-lg overflow-hidden h-48 md:h-64">
+      <img
+        src="/aboutUs/dish1.jpg"
+        alt="About us dish"
+        class="w-full h-full object-cover brightness-50"
+      />
+      <h1
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl font-bold font-heading drop-shadow-md"
+      >
+        About Us
+      </h1>
+    </div>
     <section
-      class="lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-15 gap-12.5 grid grid-cols-1"
+      class="lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-15 gap-12.5 grid grid-cols-1 mt-50"
     >
       <div>
-        <h2>Food Festival is Denmark's largest food festival</h2>
-        <p>
+        <h2 class="font-body">
+          Food Festival is Denmark's largest food festival
+        </h2>
+        <p class="font-body">
           Over three days, 30,000 food lovers gather at Tangkrogen in Aarhus to
           celebrate the joy of good food. More than 250 food companies,
           producers, artisans, and organizations create a vibrant universe of
@@ -30,14 +40,22 @@ import thumbsup from "../assets/images/thumbsup.png";
         </p>
       </div>
       <div>
-        <img src="https://picsum.photos/id/237/704/446" alt="placeholder" />
+        <img
+          class="rounded-2xl"
+          src="/aboutUs/people1.jpg"
+          alt="people sitting toghether"
+        />
       </div>
       <div>
-        <img src="https://picsum.photos/id/237/704/446" alt="placeholder" />
+        <img
+          class="rounded-2xl"
+          src="/aboutUs/people2.jpg"
+          alt="kid with food"
+        />
       </div>
       <div>
-        <h2>Mission and vision</h2>
-        <p>
+        <h2 class="font-body">Mission and vision</h2>
+        <p class="font-body">
           Food Festival's mission is to educate and renew attitudes towards the
           quality of our food. It educates guests in the understanding of food,
           cooking techniques and meals. The festival provides great experiences
@@ -51,8 +69,8 @@ import thumbsup from "../assets/images/thumbsup.png";
         </p>
       </div>
       <div>
-        <h2>The organization behind Food Festival</h2>
-        <p>
+        <h2 class="font-body">The organization behind Food Festival</h2>
+        <p class="font-body">
           Food Organisation of Denmark (FOOD) is the organization behind the
           Food Festival. FOOD is a non-profit organization that works to make
           Danish gastronomy a path to growth, development and experiences. This
@@ -62,12 +80,12 @@ import thumbsup from "../assets/images/thumbsup.png";
         </p>
       </div>
       <div>
-        <img src="https://picsum.photos/id/237/704/446" alt="placeholder" />
+        <img class="rounded-2xl" src="/aboutUs/grill2.jpg" alt="Guy at grill" />
       </div>
     </section>
     <!-- Follow and soMe Icons -->
-    <section class="flex gap-10 mt-50">
-      <div><h1>Follow us</h1></div>
+    <section class="flex gap-10 mt-40">
+      <div><h1 class="font-body">Follow us</h1></div>
       <div class="max-w-[700px] flex space-x-6">
         <div>
           <img
@@ -80,14 +98,18 @@ import thumbsup from "../assets/images/thumbsup.png";
         <div>
           <img width="55" height="55" src="/public/soMe-icons/x.svg" alt="X" />
         </div>
-        <div>
-          <img
-            width="55"
-            height="55"
-            src="/public/soMe-icons/instagram.svg"
-            alt="Instagram"
-          />
-        </div>
+        <a
+          href="https://www.instagram.com/foodfestivalofficial/"
+          target="_blank"
+          ><div>
+            <img
+              width="55"
+              height="55"
+              src="/public/soMe-icons/instagram.svg"
+              alt="Instagram"
+            />
+          </div></a
+        >
         <div>
           <img
             width="55"
@@ -99,51 +121,78 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
     </section>
     <!-- gallery section -->
-    <section class="mt-20">
-      <div class="grid grid-col-2 grid-rows-3 gap-4">
+    <div class="lg:columns-3 columns-2 gap-4 space-y-4 mt-10">
+      <img
+        class="aspect-3/2 rounded-lg"
+        src="https://www.foodfestival.dk/media/304800/pladsen-stemning-fredag-fotograf-alec-andreev-6-1200px.jpg?mode=max&width=510&rnd=133703531050000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="https://www.foodfestival.dk/media/304801/restaurant-et-vandt-a-rets-hotdog-konge-til-hotdog-dm-pa-food-festival-2024-jpg.jpg?mode=max&width=510&rnd=133703531050000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="https://www.foodfestival.dk/media/304803/billedtekst_duoen-force-majeure-og-sams-island-distillery-vandt-a-rets-cocktail-pa-food-festival-kreditering_alec-andreev-food-organisation-of-denmark.jpg?mode=max&width=510&rnd=133703531050000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="https://www.foodfestival.dk/media/304804/billedtekst_ny-hattenaes-fra-silkeborg-vandt-a-rets-innovative-hotdog-til-hotdog-dm-2024_-kreditering_sophie-due-food-organisation-of-denmark.jpg?mode=max&width=510&rnd=133703531050000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="https://www.foodfestival.dk/media/304805/billedtekst_restaurant-fauna-fra-aalborg-vandt-danmarks-bedste-hotdog-til-hotdog-dm-2024_-kreditering_sophie-due-food-organisation-of-denmark.jpg?mode=max&width=510&rnd=133703531040000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="https://www.foodfestival.dk/media/304802/torvet-fredag-daniel-reumert-3-1200px.jpg?mode=max&width=510&rnd=133703531050000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="    https://www.foodfestival.dk/media/304806/pladsen-stemning-fredag-fotograf-alec-andreev-3-1600px.jpg?mode=max&width=510&rnd=133703531040000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="https://www.foodfestival.dk/media/304807/mad-boern-fredag-daniel-reumert-2-1600px.jpg?mode=max&width=510&rnd=133703531040000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="https://www.foodfestival.dk/media/304808/dsc03649-1600px.jpg?mode=max&width=510&rnd=133703531030000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="https://www.foodfestival.dk/media/304811/torvet-fredag-daniel-reumert-2-1200px.jpg?mode=max&width=510&rnd=133703531030000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="https://www.foodfestival.dk/media/304810/torvet-fredag-daniel-reumert-1-1200px.jpg?mode=max&width=510&rnd=133703531030000000"
+      />
+      <img
+        class="aspect-square rounded-lg"
+        src="https://www.foodfestival.dk/media/304809/cocktail-dm-2024-preview-09-alec-andreev-1200px.jpg?mode=max&width=510&rnd=133703531030000000"
+      />
+    </div>
+    <!-- <section class="mt-10">
+      <div class="grid grid-cols-1 grid-rows-3 gap-4">
         <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
           <div class="grid gap-4">
             <div>
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304800/pladsen-stemning-fredag-fotograf-alec-andreev-6-1200px.jpg?mode=max&width=510&rnd=133703531050000000"
                 alt="gallery-photo"
               />
             </div>
             <div>
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304801/restaurant-et-vandt-a-rets-hotdog-konge-til-hotdog-dm-pa-food-festival-2024-jpg.jpg?mode=max&width=510&rnd=133703531050000000"
                 alt="gallery-photo"
               />
             </div>
             <div>
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-                alt="gallery-photo"
-              />
-            </div>
-          </div>
-          <div class="grid gap-4">
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                alt="gallery-photo"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="gallery-photo"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://docs.material-tailwind.com/img/team-3.jpg"
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304803/billedtekst_duoen-force-majeure-og-sams-island-distillery-vandt-a-rets-cocktail-pa-food-festival-kreditering_alec-andreev-food-organisation-of-denmark.jpg?mode=max&width=510&rnd=133703531050000000"
                 alt="gallery-photo"
               />
             </div>
@@ -151,22 +200,22 @@ import thumbsup from "../assets/images/thumbsup.png";
           <div class="grid gap-4">
             <div>
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304804/billedtekst_ny-hattenaes-fra-silkeborg-vandt-a-rets-innovative-hotdog-til-hotdog-dm-2024_-kreditering_sophie-due-food-organisation-of-denmark.jpg?mode=max&width=510&rnd=133703531050000000"
                 alt="gallery-photo"
               />
             </div>
             <div>
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://docs.material-tailwind.com/img/team-3.jpg"
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304805/billedtekst_restaurant-fauna-fra-aalborg-vandt-danmarks-bedste-hotdog-til-hotdog-dm-2024_-kreditering_sophie-due-food-organisation-of-denmark.jpg?mode=max&width=510&rnd=133703531040000000"
                 alt="gallery-photo"
               />
             </div>
             <div>
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304802/torvet-fredag-daniel-reumert-3-1200px.jpg?mode=max&width=510&rnd=133703531050000000"
                 alt="gallery-photo"
               />
             </div>
@@ -174,22 +223,47 @@ import thumbsup from "../assets/images/thumbsup.png";
           <div class="grid gap-4">
             <div>
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304806/pladsen-stemning-fredag-fotograf-alec-andreev-3-1600px.jpg?mode=max&width=510&rnd=133703531040000000"
                 alt="gallery-photo"
               />
             </div>
             <div>
               <img
-                class="h-auto max-w-full rounded-lg object-cover object-center"
-                src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304807/mad-boern-fredag-daniel-reumert-2-1600px.jpg?mode=max&width=510&rnd=133703531040000000"
+                alt="gallery-photo"
+              />
+            </div>
+            <div>
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304808/dsc03649-1600px.jpg?mode=max&width=510&rnd=133703531030000000"
+                alt="gallery-photo"
+              />
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div>
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304809/cocktail-dm-2024-preview-09-alec-andreev-1200px.jpg?mode=max&width=510&rnd=133703531030000000"
+                alt="gallery-photo"
+              />
+            </div>
+            <div>
+              <img
+                class="h-full w-full rounded-lg object-cover object-center"
+                src="https://www.foodfestival.dk/media/304810/torvet-fredag-daniel-reumert-1-1200px.jpg?mode=max&width=510&rnd=133703531030000000"
                 alt="gallery-photo"
               />
             </div>
           </div>
         </div>
+      </div>
+    </section> -->
 
-        <!-- <div class="col-span-2">
+    <!-- <div class="col-span-2">
           <img
             width="385.26"
             height="717.02"
@@ -222,12 +296,10 @@ import thumbsup from "../assets/images/thumbsup.png";
           />
         </div>
       </div>  -->
-      </div>
-    </section>
   </article>
-
-  <script>
-    /* Import af Motion One bibliotek */
-    import { animate, stagger, inView, scroll } from "motion";
-  </script>
 </MainLayout>
+
+<script>
+  /* Import af Motion One bibliotek */
+  import { animate, stagger, inView, scroll } from "motion";
+</script>
