@@ -4,8 +4,8 @@
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
-/* @plugin "daisyui/theme" {
-  name: "themeV1";
+@plugin "daisyui/theme" {
+  name: "theme";
   default: false;
   prefersdark: false;
   color-scheme: "light";
@@ -37,7 +37,7 @@
   --border: 1px;
   --depth: 0;
   --noise: 0;
-} */
+}
 
 @theme {
   /* Her tilføjes theme variable // tokens */
@@ -46,31 +46,41 @@
   --font-heading: "Fraunces", serif;
   --font-body: "Chivo", sans-serif;
 
+  /*Infinite scroll animation*/
+  --animate-infinite-scroll: infinite-scroll 25s linear infinite;
 
-	/*Infinite scroll animation*/
-	--animate-infinite-scroll: infinite-scroll 25s linear infinite;  
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 
-	@keyframes infinite-scroll {    
-	from { transform: translateX(0);}    
-	to { transform: translateX(-100%);}  
-	}
+  /*Food scroll left animation*/
+  --animate-food-scroll-left: food-scroll-left 15s linear infinite;
 
-	/*Food scroll left animation*/
-	--animate-food-scroll-left: food-scroll-left 15s linear infinite;  
+  @keyframes food-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 
-	@keyframes food-scroll-left {    
-	from { transform: translateX(0);}    
-	to { transform: translateX(-100%);}  
-	}
+  /*Food scroll right animation*/
+  --animate-food-scroll-right: food-scroll-right 15s linear infinite;
 
-	/*Food scroll right animation*/
-	--animate-food-scroll-right: food-scroll-right 15s linear infinite;  
-
-	@keyframes food-scroll-right {    
-	from { transform: translateX(-100%);}    
-	to { transform: translateX(0);}  
-	}
-
+  @keyframes food-scroll-right {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
 }
 
 @layer base {
