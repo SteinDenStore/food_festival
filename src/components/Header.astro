@@ -1,5 +1,45 @@
 ---
 ---
-<div>
-Header - tilføj navigation mm.
+
+
+
+<div class="flex items-center bg-[#3c9b7e] text-white rounded-full px-4 py-2 space-x-6">
+  <!-- Burger Menu -->
+  <div class="flex items-center space-x-2 cursor-pointer md:hidden" id="burger-menu">
+    <div class="space-y-1">
+      <span class="block w-5 h-0.5 bg-white"></span>
+      <span class="block w-5 h-0.5 bg-white"></span>
+      <span class="block w-5 h-0.5 bg-white"></span>
+    </div>
+    <span class="font-semibold">Menu</span>
+  </div>
+
+  <!-- Navigation Links -->
+  <nav
+    id="nav-links"
+    class="hidden flex-col space-y-4 bg-[#3c9b7e] text-white p-4 rounded-lg md:flex md:flex-row md:space-y-0 md:space-x-6"
+  >
+    <a href="#" class="block hover:underline">Home</a>
+    <a href="#" class="block hover:underline">About</a>
+    <a href="#" class="block hover:underline">Events</a>
+    <a href="#" class="block hover:underline">Contact</a>
+  </nav>
+
+  <!-- Title -->
+  <span class="font-bold text-lg">Food Festival</span>
+
+  <!-- Tickets Button -->
+  <button class="bg-[#ff8737] text-white font-bold px-5 py-2 rounded-full hover:bg-[#ff9b59] transition">
+    Tickets
+  </button>
 </div>
+
+<script>
+  // JavaScript to toggle the burger menu
+  const burgerMenu = document.getElementById('burger-menu');
+  const navLinks = document.getElementById('nav-links');
+
+  burgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('hidden');
+  });
+</script>
