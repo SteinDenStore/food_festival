@@ -1,14 +1,20 @@
 ---
 // Henter parametrene fra Astro.props
-const { htmlheading="h2", size="medium", stylingclasses=""} =Astro.props; 
+const {
+  htmlheading = "h2",
+  size = "medium",
+  stylingclasses = "",
+} = Astro.props;
 const Htmlheading = htmlheading;
 
 const sizeClasses = {
-    "h1": "text-[40px] lg:text-5xl",
-    "h2": "text-[32px] lg:text-[38px]",
-    "h3": "text-xl lg:text-[32px]",
-    "h4": "text-base lg:text-[28px]",
-    
+  h1: "text-[40px] lg:text-5xl",
+  h2: "text-[32px] lg:text-[38px]",
+  h3: "text-xl lg:text-[32px]",
+  h4: "text-base lg:text-[28px]",
 };
 ---
-<Htmlheading class:list={[sizeClasses[size], stylingclasses]}><slot /></Htmlheading>
+
+<Htmlheading class:list={[sizeClasses[size], stylingclasses]}
+  ><slot /></Htmlheading
+>

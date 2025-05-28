@@ -4,10 +4,14 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import TextBody from "../components/TextBody.astro";
+import TextHeading from "../components/TextHeading.astro";
 ---
 
 <MainLayout title="About Us">
-  <article class="lg:max-w-[1260px] max-w-[352px] mx-auto">
+  <article
+    class="lg:max-w-[1260px] max-w-[352px] mx-auto [&_section]:mt-40 text-[#00415F]"
+  >
     <!-- Image and Heading -->
     <div class="relative rounded-lg overflow-hidden h-48 md:h-64">
       <img
@@ -15,20 +19,26 @@ import thumbsup from "../assets/images/thumbsup.png";
         alt="About us dish"
         class="w-full h-full object-cover brightness-50"
       />
-      <h1
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl font-bold font-heading drop-shadow-md"
+      <TextHeading
+        htmlheading="h1"
+        size="h2 lg:h1"
+        stylingclasses="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl font-bold font-heading drop-shadow-md text-white"
       >
         About Us
-      </h1>
+      </TextHeading>
     </div>
     <section
-      class="lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-15 gap-12.5 grid grid-cols-1 mt-50"
+      class="lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-15 gap-12.5 grid grid-cols-1"
     >
       <div>
-        <h2 class="font-body">
+        <TextHeading
+          htmlheading="h3"
+          size="h2"
+          stylingclasses="font-heading font-bold mb-4"
+        >
           Food Festival is Denmark's largest food festival
-        </h2>
-        <p class="font-body">
+        </TextHeading>
+        <TextBody htmlbody="p" size="body" stylingclasses="font-body leading-7">
           Over three days, 30,000 food lovers gather at Tangkrogen in Aarhus to
           celebrate the joy of good food. More than 250 food companies,
           producers, artisans, and organizations create a vibrant universe of
@@ -36,8 +46,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           art, with plenty of tastings, workshops, and activities that
           entertain, surprise, and teach new skills. With 50,000 m² of space and
           over 250 unique experiences, there’s something for everyone — kids,
-          adults, foodies, and the just plain hungry.
-        </p>
+          adults, foodies, and the just plain hungry.</TextBody
+        >
       </div>
       <div>
         <img
@@ -54,8 +64,14 @@ import thumbsup from "../assets/images/thumbsup.png";
         />
       </div>
       <div>
-        <h2 class="font-body">Mission and vision</h2>
-        <p class="font-body">
+        <TextHeading
+          htmlheading="h3"
+          size="h2"
+          stylingclasses="font-heading font-bold mb-4"
+        >
+          Mission and vision
+        </TextHeading>
+        <TextBody htmlbody="p" size="body" stylingclasses="font-body leading-7">
           Food Festival's mission is to educate and renew attitudes towards the
           quality of our food. It educates guests in the understanding of food,
           cooking techniques and meals. The festival provides great experiences
@@ -65,27 +81,41 @@ import thumbsup from "../assets/images/thumbsup.png";
           awareness of the high level and great potential of Denmark's excellent
           raw materials and production methods. The vision is to be Denmark's
           largest annual food event - both for the general public and the food
-          industry.
-        </p>
+          industry.</TextBody
+        >
       </div>
       <div>
-        <h2 class="font-body">The organization behind Food Festival</h2>
-        <p class="font-body">
+        <TextHeading
+          htmlheading="h3"
+          size="h2"
+          stylingclasses="font-heading font-bold mb-4"
+        >
+          The organization behind Food Festival
+        </TextHeading>
+        <TextBody htmlbody="p" size="body" stylingclasses="font-body leading-7">
           Food Organisation of Denmark (FOOD) is the organization behind the
           Food Festival. FOOD is a non-profit organization that works to make
           Danish gastronomy a path to growth, development and experiences. This
           is done through food experiences, communication and development of
           projects that benefit the entire value chain in the food industry.
-          Read more about Food Organisation of Denmark here.
-        </p>
+          Read more about Food Organisation of Denmark here.</TextBody
+        >
       </div>
       <div>
         <img class="rounded-2xl" src="/aboutUs/grill2.jpg" alt="Guy at grill" />
       </div>
     </section>
     <!-- Follow and soMe Icons -->
-    <section class="flex gap-10 mt-40">
-      <div><h1 class="font-body">Follow us</h1></div>
+    <section class="flex gap-10">
+      <div>
+        <TextHeading
+          htmlheading="h3"
+          size="h2"
+          stylingclasses="font-heading font-bold mb-4"
+        >
+          Follow us
+        </TextHeading>
+      </div>
       <div class="max-w-[700px] flex space-x-6">
         <a
           href="https://www.facebook.com/FoodFestival.dk/?fref=ts"
