@@ -2,6 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import ListElement from "../components/ListElement.astro";
+import TextHeading from "../components/TextHeading.astro";
+
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
@@ -9,8 +11,9 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <MainLayout title="Home">
 
-  <article class="[&_section]:mt-20 text-[#00415F]
-  [&_h1]:font-heading [&_h2]:font-heading [&_h3]:font-heading [&_h4]:font-heading [&_p]:font-body">
+  <article class="[&_section]:mt-20 text-[#00415F]">
+    <!-- [&_h1]:font-heading [&_h2]:font-heading [&_h3]:font-heading [&_h4]:font-heading [&_p]:font-body -->
+
   <!-- start food banner -->
     <section class="overflow-x-hidden max-w-screen grid grid-rows-1 grid-cols-1 ">
 
@@ -82,13 +85,13 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
 
       <div class="col-start-1 row-start-1 row-span-1 col-span-1 my-auto z-1">
-      <div class="cta mx-auto my-auto place-content-center text-center col-start-1 row-start-1 row-span-1 col-span-1 lg:w-167 lg:h-167 rounded-full bg-green-900">
-        <h1 class="font-body lg:text-xl text-white">Welcome to</h1>
-        <h2 class="my-4 lg:text-6xl font-bold text-white">Denmark's <br> largest annual <br> food celebration</h2>
-        <h3 class="font-body text-2xl text-white">September 5 - 7, 2025 <br> at Tangkrogen in Aarhus</h3>
-        <div class="felx justify-center gap-10 mt-6">
-          <Button>Get tickets</Button>
-          <Button>View program</Button>
+      <div class="cta mx-auto my-auto place-content-center text-center col-start-1 row-start-1 row-span-1 col-span-1 w-88 h-88 lg:w-167 lg:h-167 rounded-full bg-green-900">
+        <h1 class="font-body text-sm lg:text-xl text-white">Welcome to</h1>
+        <h2 class="font-heading my-4 text-2xl lg:text-6xl font-bold text-white">Denmark's <br> largest annual <br> food celebration</h2>
+        <h3 class="font-body text-lg text-white">September 5 - 7, 2025 <br> at Tangkrogen in Aarhus</h3>
+        <div class="flex justify-center gap-4 lg:gap-8 mt:4 lg:mt-6">
+          <Button size="tiny">Get tickets</Button>
+          <Button size="tiny">View program</Button>
         </div>
       </div>
     </div>
@@ -189,36 +192,18 @@ import thumbsup from "../assets/images/thumbsup.png";
 
     <!-- start parters -->
     <section class="">
-      <h3 class="font-bold">Partners</h3>
-      <div class="flex flex-wrap gap-3">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
+      <TextHeading htmlheading="h3" size="h1" stylingclasses="font-bold mb-8">Partners</TextHeading>
+      <div class="flex flex-wrap gap-3 [&_img]:max-w-18">
+        <img src="/partners/aarhus_events.webp" alt="">
+        <img src="/partners/aarhus_kommune.webp" alt="">
+        <img src="/partners/aarhus_tech.webp" alt="">
+        <img src="/partners/aBCatering.webp" alt="">
+        <img src="/partners/college365.webp" alt="">
+        <img src="/partners/connie.webp" alt="">
+        <img src="/partners/danishCrown.webp" alt="">
+        <img src="/partners/dk_bestyr.webp" alt="">
 
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
-        <img src="https://picsum.photos/id/237/70/70" alt="">
+        
       </div>
     </section>
     <!-- end parters -->
