@@ -4,16 +4,20 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import TextBody from "../components/TextBody.astro";
+import TextHeading from "../components/TextHeading.astro";
 ---
 
 <MainLayout title="Tickets">
   
     <section class= "py-6 px-4 text-center space-y-4">
       <div class="relative rounded-lg overflow-hidden h-40 md:h-60 bg-center bg-cover bg-no-repeat" style="background-image: url('/ticketspage/foodfestival.webp');">
-        <div class="absolute inset-0 bg-black/50"></div> <!-- Dark overlay for reduced brightness -->
-        <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl md:text-4xl font-bold drop-shadow-md z-10">
-          Tickets
-        </h1>
+        <div class="absolute inset-0 bg-black/50"></div> 
+        <TextHeading
+        htmlheading= "h1"
+        size= "h2 lg:h1"
+        stylingclasses= "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl md:text-4xl font-bold drop-shadow-md z-10">
+          Tickets </TextHeading>
       </div>
     
       <!-- Description Text -->
