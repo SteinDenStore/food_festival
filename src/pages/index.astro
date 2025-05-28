@@ -141,9 +141,9 @@ import thumbsup from "../assets/images/thumbsup.png";
 
     <!-- start tickets -->
     <section>
-      <div>
-        <TextHeading htmlheading="h3" size="h3" stylingclasses="font-bold">Tickets</TextHeading>
-        <p>The ticket gives access to the entire festival site. So eat your way through 7 festival areas, take part in a host of free workshops, free show kitchens and much more!</p>
+      <div class="lg:flex lg:flex-col lg:items-center">
+        <TextHeading htmlheading="h3" size="h1" stylingclasses="font-heading font-bold">Tickets</TextHeading>
+        <p class="font-body text-center max-w-120 my-4">The ticket gives access to the entire festival site. So eat your way through 7 festival areas, take part in a host of free workshops, free show kitchens and much more!</p>
       </div>
       <!-- TICKET COMPONENTS GOES HERE -->
     </section>
@@ -151,11 +151,11 @@ import thumbsup from "../assets/images/thumbsup.png";
     
     
     <!-- start program -->
-    <section>
-      <div>
+    <section class="">
+      <div class="mb-4 lg:mb-12">
         <TextHeading htmlheading="h3" size="h1" stylingclasses="font-heading font-bold mb-4">Featured events</TextHeading>
       </div>
-      <div class="px-8 py-6 bg-orange-100 rounded-lg mb-4 lg:rounded-3xl">
+      <div class="px-8 py-6 bg-orange-100 rounded-lg mb-8 lg:mb-8 lg:rounded-3xl">
         
         <ListElement
           url="/program"
@@ -194,9 +194,9 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 
     <!-- start parters -->
-    <section class="flex flex-col justify-center mx-auto">
+    <section class="flex flex-col justify-center">
       <TextHeading htmlheading="h2" size="h1" stylingclasses="font-bold mb-8 font-heading lg:mx-auto">Partners</TextHeading>
-      <div class="flex flex-wrap gap-8 [&_img]:max-w-18 lg:[&_img]:max-w-62 justify-center">
+      <div class="flex flex-wrap gap-8 [&_img]:max-w-18 lg:[&_img]:max-w-62 lg:justify-center">
         <img src="/partners/aarhus_events.webp" alt="aahus events">
         <img src="/partners/aarhus_kommune.webp" alt="aarhus kommune">
         <img src="/partners/aarhus_tech.webp" alt="aarhus tech">
