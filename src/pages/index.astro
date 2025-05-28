@@ -11,7 +11,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <MainLayout title="Home">
 
-  <article class="[&_section]:mt-20 text-[#00415F]">
+  <article class="[&_section]:mt-50 text-[#00415F]">
     <!-- [&_h1]:font-heading [&_h2]:font-heading [&_h3]:font-heading [&_h4]:font-heading [&_p]:font-body -->
 
   <!-- start food banner -->
@@ -86,12 +86,12 @@ import thumbsup from "../assets/images/thumbsup.png";
 
       <div class="col-start-1 row-start-1 row-span-1 col-span-1 my-auto z-1">
       <div class="cta mx-auto my-auto place-content-center text-center col-start-1 row-start-1 row-span-1 col-span-1 w-88 h-88 lg:w-167 lg:h-167 rounded-full bg-green-900">
-        <h1 class="font-body text-sm lg:text-xl text-white">Welcome to</h1>
+        <h1 class="font-body font-bold text-sm lg:text-2xl text-white">Welcome to</h1>
         <h2 class="font-heading my-4 text-2xl lg:text-6xl font-bold text-white">Denmark's <br> largest annual <br> food celebration</h2>
-        <h3 class="font-body text-lg text-white">September 5 - 7, 2025 <br> at Tangkrogen in Aarhus</h3>
+        <h3 class="font-body font-bold text-lg lg:text-2xl text-white">September 5 - 7, 2025 <br> at Tangkrogen in Aarhus</h3>
         <div class="flex justify-center gap-4 lg:gap-8 mt:4 lg:mt-6">
-          <Button size="tiny">Get tickets</Button>
-          <Button size="tiny">View program</Button>
+          <Button size="tiny lg:large">Get tickets</Button>
+          <Button size="tiny lg:large">View program</Button>
         </div>
       </div>
     </div>
@@ -129,8 +129,8 @@ import thumbsup from "../assets/images/thumbsup.png";
         class="rounded-2xl  col-span-2">
       </div>
       <div>
-        <h3 class="font-bold text-">A Weekend of Flavors, <br>Fun & Food Experiences</h3>
-        <p class="my-4">Join us for three unforgettable days of food, inspiration, and family fun at Tangkrogen in Aarhus. Every year, we welcome 30,000 guests to Denmark’s biggest food mecca — a celebration for anyone who loves great food.
+        <TextHeading htmlheading="h3" size="h3" stylingclasses="font-bold font-heading">A Weekend of Flavors, <br>Fun & Food Experiences</TextHeading>
+        <p class="my-4 font-body">Join us for three unforgettable days of food, inspiration, and family fun at Tangkrogen in Aarhus. Every year, we welcome 30,000 guests to Denmark’s biggest food mecca — a celebration for anyone who loves great food.
           Discover an exciting program filled with workshops, talks, passionate producers, local businesses, and headline events like the Danish Hotdog Championship, Danish BBQ Championship, and Cocktail of the Year.
           See you at Food Festival 2025!</p>
         <Button variant="primary" size="medium"><a href="/aboutUs">Read more</a></Button>
@@ -142,18 +142,21 @@ import thumbsup from "../assets/images/thumbsup.png";
     <!-- start tickets -->
     <section>
       <div>
-        <h3 class="font-bold">Tickets</h3>
+        <TextHeading htmlheading="h3" size="h3" stylingclasses="font-bold">Tickets</TextHeading>
         <p>The ticket gives access to the entire festival site. So eat your way through 7 festival areas, take part in a host of free workshops, free show kitchens and much more!</p>
       </div>
       <!-- TICKET COMPONENTS GOES HERE -->
     </section>
     <!-- end tickets -->
-     
+    
     
     <!-- start program -->
     <section>
+      <div>
+        <TextHeading htmlheading="h3" size="h1" stylingclasses="font-heading font-bold mb-4">Featured events</TextHeading>
+      </div>
       <div class="px-8 py-6 bg-orange-100 rounded-lg mb-4 lg:rounded-3xl">
-        <h3 class="font-bold mb-4">Featured events</h3>
+        
         <ListElement
           url="/program"
           image="/events/cocktail.png"
@@ -191,17 +194,32 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 
     <!-- start parters -->
-    <section class="">
-      <TextHeading htmlheading="h3" size="h1" stylingclasses="font-bold mb-8">Partners</TextHeading>
-      <div class="flex flex-wrap gap-3 [&_img]:max-w-18">
-        <img src="/partners/aarhus_events.webp" alt="">
-        <img src="/partners/aarhus_kommune.webp" alt="">
-        <img src="/partners/aarhus_tech.webp" alt="">
-        <img src="/partners/aBCatering.webp" alt="">
-        <img src="/partners/college365.webp" alt="">
-        <img src="/partners/connie.webp" alt="">
-        <img src="/partners/danishCrown.webp" alt="">
-        <img src="/partners/dk_bestyr.webp" alt="">
+    <section class="flex flex-col justify-center mx-auto">
+      <TextHeading htmlheading="h2" size="h1" stylingclasses="font-bold mb-8 font-heading lg:mx-auto">Partners</TextHeading>
+      <div class="flex flex-wrap gap-8 [&_img]:max-w-18 lg:[&_img]:max-w-62 justify-center">
+        <img src="/partners/aarhus_events.webp" alt="aahus events">
+        <img src="/partners/aarhus_kommune.webp" alt="aarhus kommune">
+        <img src="/partners/aarhus_tech.webp" alt="aarhus tech">
+        <img src="/partners/aBCatering.webp" alt="AB Catering">
+        <img src="/partners/arla.webp" alt="Arla">
+        <img src="/partners/bentBrandt.webp" alt="Bent Brandt">
+        <img src="/partners/college365.webp" alt="college 365">
+        <img src="/partners/connie.webp" alt="connie">
+        <img src="/partners/danishCrown.webp" alt="danish crown">
+        <img src="/partners/dk_bestyr.webp" alt="bestyr">
+        <img src="/partners/ehrverv.webp" alt="ehrverv">
+        <img src="/partners/fodevare.webp" alt="fodevare">
+        <img src="/partners/hjHansenVin.webp" alt="hjhansen vin">
+        <img src="/partners/horesta.webp" alt="horsta">
+        <img src="/partners/klikOgByg.webp" alt="klig og byg">
+        <img src="/partners/kvægafgiftsfonden.webp" alt="kvægafgiftsfonden">
+        <img src="/partners/plantas.webp" alt="plantas">
+        <img src="/partners/pLarsenKaffe.webp" alt="P Larsen kaffe">
+        <img src="/partners/produktionAfgift.webp" alt="produktion afgift">
+        <img src="/partners/royalUni.webp" alt="royal uni">
+        <img src="/partners/scandic.webp" alt="scandic">
+        <img src="/partners/textilia.webp" alt="textilia">
+        <img src="/partners/visit_aarhus.webp" alt="visit aarhus">
 
         
       </div>
@@ -218,41 +236,3 @@ import thumbsup from "../assets/images/thumbsup.png";
   /* Import af Motion One bibliotek */
   import { animate, stagger, inView, scroll } from "motion";
 </script>
-
-
-<!-- <style>
-  
-	h1{
-    font-size: 40px;
-}
-	h2{
-	font-size: 32px;
-}
-	h3{
-	font-size: 24px;
-}
-	h4{
-	font-size: 18px;
-}
-	p{
-	font-size: 16px;
-}
-	@media (min-width: 640px) {
-		/* Small devices (phones, 640px and up) */
-		h1{
-			font-size: 48px;
-		}
-		h2{
-			font-size: 38px;
-		}
-		h3{
-			font-size: 32px;
-		}
-		h4{
-			font-size: 28px;
-		}
-		p{
-			font-size: 18px;
-		}
-	}
-</style> -->
