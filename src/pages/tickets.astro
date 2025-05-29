@@ -9,149 +9,153 @@ import TextHeading from "../components/TextHeading.astro";
 ---
 
 <MainLayout title="Tickets">
-  
-    <section class= "py-6 px-4 text-center space-y-4">
-      <div class="relative rounded-lg overflow-hidden h-40 md:h-60 bg-center bg-cover bg-no-repeat" style="background-image: url('/ticketspage/foodfestival.webp');">
-        <div class="absolute inset-0 bg-black/50"></div> 
-        <TextHeading
-        htmlheading= "h1"
-        size= "h2 lg:h1"
-        stylingclasses= "font-heading absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl md:text-4xl font-bold drop-shadow-md z-10">
-          Tickets </TextHeading>
+  <article class="[&_section]:mt-35 text-[#00415F]">
+    <section class="relative rounded-lg overflow-hidden h-64 md:h-80 max-w-7xl mx-auto">
+      <div class="bg-center bg-cover brightness-60">
+        <img src="/ticketspage/header.png" alt="">
       </div>
+      <TextHeading
+        htmlheading="h1"
+        size="h2 lg:h1"
+        stylingclasses="font-heading absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl md:text-4xl font-bold drop-shadow-md z-10">
+        Tickets
+      </TextHeading>
+    </section>
     
       <!-- Description Text -->
-      <p class="text-sm text-teal-900 max-w-md mx-auto space-y-1 my-4 font-body">
+      <section>
+      <p class="my-4 font-body text-center">
         The ticket gives access to the entire festival site.<br />
         So eat your way through <strong>7 festival areas</strong>, take part in a host of
         <strong>free workshops</strong>, <strong>free show kitchens</strong> and much more!<br />
         There are few activities that cost an additional price.<br />
         <span class="font-semibold">ATTENTION.</span> Save money - buy your ticket in presale.
-      </p>
-    </section>
+      </p></section>
+  
 
    <section>
+  <div class="bg-teal-50 p-8 rounded-2xl shadow-lg w-full max-w-5xl mx-auto">
+    <div class="flex flex-col md:flex-row md:space-x-10">
+      
+      <!-- Standard Section -->
+      <div class="w-full md:w-1/2">
+        <h2 class="text-center text-3xl font-bold text-teal-900 mb-6 font-heading">Standard</h2>
+        <div class="space-y-4">
+          <!-- Item -->
+          <div class="flex justify-between items-center border-b pb-2">
+            <span class="font-semibold text-teal-900 text-lg">Weekend</span>
+            <div class="flex items-center space-x-2 text-base">
+              <span class="w-12 text-right">170 kr</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">-</button>
+              <span class="w-4 text-center">0</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">+</button>
+            </div>
+          </div>
+          <div class="flex justify-between items-center border-b pb-2">
+            <span class="font-semibold text-teal-900 text-lg">Friday</span>
+            <div class="flex items-center space-x-2 text-base">
+              <span class="w-12 text-right">110 kr</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">-</button>
+              <span class="w-4 text-center">0</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">+</button>
+            </div>
+          </div>
+          <div class="flex justify-between items-center border-b pb-2">
+            <span class="font-semibold text-teal-900 text-lg">Saturday</span>
+            <div class="flex items-center space-x-2 text-base">
+              <span class="w-12 text-right">110 kr</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">-</button>
+              <span class="w-4 text-center">0</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">+</button>
+            </div>
+          </div>
+          <div class="flex justify-between items-center border-b pb-2">
+            <span class="font-semibold text-teal-900 text-lg">Sunday</span>
+            <div class="flex items-center space-x-2 text-base">
+              <span class="w-12 text-right">110 kr</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">-</button>
+              <span class="w-4 text-center">0</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <!-- Parent Container -->
-<div class="bg-teal-50 p-6 rounded-2xl shadow-lg w-full max-w-5xl mx-auto">
-  <div class="flex flex-col md:flex-row md:space-x-6">
-    
-    <!-- Standard Section -->
-    <div class="w-full md:w-1/2">
-      <h2 class="text-center text-2xl font-bold text-teal-900 mb-4 font-heading">Standard</h2>
-      <div class="space-y-3 mb-6">
-        <div class="flex justify-between items-center border-b pb-1">
-          <span class="font-semibold text-teal-900 font-heading">Weekend</span>
-          <div class="flex items-center space-x-2 text-sm">
-            <span>170 kr</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
-            <span>0</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+      <!-- Discounted Section -->
+      <div class="w-full md:w-1/2 mt-10 md:mt-0">
+        <h2 class="text-center text-3xl font-bold text-teal-900 mb-1 font-heading">Discounted</h2>
+        <p class="text-center text-xs text-gray-600 mb-5">*Early bird, pensioner/student</p>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center border-b pb-2">
+            <span class="font-semibold text-teal-900 text-lg">Weekend</span>
+            <div class="flex items-center space-x-2 text-base">
+              <span class="w-12 text-right">130 kr</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-orange-400 text-lg">-</button>
+              <span class="w-4 text-center">0</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">+</button>
+            </div>
           </div>
-        </div>
-        <div class="flex justify-between items-center border-b pb-1">
-          <span class="font-semibold text-teal-900 font-heading">Friday</span>
-          <div class="flex items-center space-x-2 text-sm">
-            <span>110 kr</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
-            <span>0</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+          <div class="flex justify-between items-center border-b pb-2">
+            <span class="font-semibold text-teal-900 text-lg">Friday</span>
+            <div class="flex items-center space-x-2 text-base">
+              <span class="w-12 text-right">80 kr</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">-</button>
+              <span class="w-4 text-center">0</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">+</button>
+            </div>
           </div>
-        </div>
-        <div class="flex justify-between items-center border-b pb-1">
-          <span class="font-semibold text-teal-900 font-heading">Saturday</span>
-          <div class="flex items-center space-x-2 text-sm">
-            <span>110 kr</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
-            <span>0</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+          <div class="flex justify-between items-center border-b pb-2">
+            <span class="font-semibold text-teal-900 text-lg">Saturday</span>
+            <div class="flex items-center space-x-2 text-base">
+              <span class="w-12 text-right">80 kr</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">-</button>
+              <span class="w-4 text-center">0</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">+</button>
+            </div>
           </div>
-        </div>
-        <div class="flex justify-between items-center border-b pb-1">
-          <span class="font-semibold text-teal-900 font-heading">Sunday</span>
-          <div class="flex items-center space-x-2 text-sm">
-            <span>110 kr</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
-            <span>0</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
+          <div class="flex justify-between items-center border-b pb-2">
+            <span class="font-semibold text-teal-900 text-lg">Sunday</span>
+            <div class="flex items-center space-x-2 text-base">
+              <span class="w-12 text-right">80 kr</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">-</button>
+              <span class="w-4 text-center">0</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">+</button>
+            </div>
+          </div>
+          <div class="flex justify-between items-center border-b pb-2">
+            <span class="font-semibold text-teal-900 text-lg">Kids 10 & under</span>
+            <div class="flex items-center space-x-2 text-base">
+              <span class="w-12 text-right">Free</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">-</button>
+              <span class="w-4 text-center">0</span>
+              <button class="w-8 h-8 rounded-full bg-gray-100 text-lg text-orange-400">+</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Discounted Section -->
-    <div class="w-full md:w-1/2 mt-6 md:mt-0">
-      <h2 class="text-center text-2xl font-bold text-teal-900 my-4 font-heading">Discounted</h2>
-      <p class="text-center text-xs text-gray-600 mb-4">*Early bird, pensioner/student</p>
-      <div class="space-y-3 mb-6">
-        <div class="flex justify-between items-center border-b pb-1">
-          <span class="font-semibold text-teal-900 font-heading">Weekend</span>
-          <div class="flex items-center space-x-2 text-sm">
-            <span>130 kr</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100 text-orange-400">-</button>
-            <span>0</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
-          </div>
-        </div>
-        <div class="flex justify-between items-center border-b pb-1">
-          <span class="font-semibold text-teal-900 font-heading">Friday</span>
-          <div class="flex items-center space-x-2 text-sm">
-            <span>80 kr</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
-            <span>0</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
-          </div>
-        </div>
-        <div class="flex justify-between items-center border-b pb-1">
-          <span class="font-semibold text-teal-900 font-heading">Saturday</span>
-          <div class="flex items-center space-x-2 text-sm">
-            <span>80 kr</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
-            <span>0</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
-          </div>
-        </div>
-        <div class="flex justify-between items-center border-b pb-1">
-          <span class="font-semibold text-teal-900 font-heading">Sunday</span>
-          <div class="flex items-center space-x-2 text-sm">
-            <span>80 kr</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
-            <span>0</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
-          </div>
-        </div>
-        <div class="flex justify-between items-center border-b pb-1">
-          <span class="font-semibold text-teal-900 font-heading">Kids 10 & under</span>
-          <div class="flex items-center space-x-2 text-sm">
-            <span>Free</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">-</button>
-            <span>0</span>
-            <button class="px-2 py-1 rounded-full bg-gray-100">+</button>
-          </div>
-        </div>
-      </div>
+    <!-- Total & Payment -->
+    <div class="text-center text-2xl font-bold text-teal-900 mt-10 font-heading">
+      Total <span class="text-orange-500">0.00 kr</span>
+    </div>
+    <div class="flex justify-center items-center mt-5">
+      <button class="bg-orange-400 text-white font-semibold py-2 px-6 rounded-full shadow hover:bg-orange-500 transition">
+        Proceed to payment
+      </button>
     </div>
   </div>
+</section>
 
-  <!-- Total & Payment -->
-  <div class="text-center text-xl font-bold text-teal-900 mt-6 font-heading">
-    TOTAL <span class="text-orange-500">0.00 KR</span>
-  </div>
-  <div class="flex justify-center items-center mt-4">
-    <button class="bg-orange-400 text-white font-bold py-1 px-4 rounded-full">
-      Proceed to payment
-    </button>
-</div>
-</div>
 
 <section class="py-10 px-6 space-y-8 max-w-3xl mx-auto">
 
   <!-- Terms for online purchase -->
   <div class="bg-emerald-300 p-6 rounded-2xl flex items-start space-x-4 min-h-[200px]">
-    <img src="/ticketspage/terms.webp" alt="Terms Icon" class="w-20 h-20 mt-2" />
+    <img src="/ticketspage/terms.webp" alt="Terms Icon" class="w-30 h-30 mt-2" />
     <div>
-      <h3 class="text-xl font-bold text-white m-5">Terms for online purchase</h3>
-      <p class="text-white text-sm m-5">
+      <h3 class="text-xl font-bold text-white m-5 font-heading">Terms for online purchase</h3>
+      <p class="text-white text-sm m-5 font-body">
         The option to buy a day ticket at the pre-sale price online expires at 00:00 the day before.
         For example, if you want to buy a day ticket for Sunday, you need to buy the ticket on
         Saturday before 23:59 to get the pre-sale price.
@@ -161,28 +165,30 @@ import TextHeading from "../components/TextHeading.astro";
 
   <!-- Exchange Tickets -->
   <div class="bg-emerald-300 p-6 rounded-2xl flex items-start space-x-4 min-h-[200px]">
-    <img src="/ticketspage/exchange.webp" alt="Exchange Icon" class="w-20 h-20 mt-2" />
+    <img src="/ticketspage/exchange.webp" alt="Exchange Icon" class="w-30 h-30 mt-2" />
     <div>
-      <h3 class="text-xl font-bold text-white m-5">Exchange Tickets</h3>
-      <p class="text-white text-sm m-5">
+      <h3 class="text-xl font-bold text-white m-5 font-heading">Exchange Tickets</h3>
+      <p class="text-white text-sm m-5 font-body">
         You can exchange your day ticket for a weekend ticket for only DKK 75 in the Information Center at Tangkrogen.
       </p>
     </div>
-  
 
 </section>
 
+<section class="mt-16 max-w-7xl mx-auto text-center">
+  <TextHeading
+    htmlheading="h1"
+    size="h2 lg:h1"
+    stylingclasses="text-3xl lg:text-4xl font-bold mb-8 font-heading"
+  >
+    Festival Map
+  </TextHeading>
+  <div class="flex justify-center w-full h-auto rounded-lg object-cover">
+    <img src="/ticketspage/map.png" alt="Festival Map" />
+  </div>
+</section>
 
-
-   <section>
-    <TextHeading
-        htmlheading= "h1"
-        size= "h2 lg:h1"
-        stylingclasses ="">Festival Map </TextHeading>
-      </div>
-    <div><img src="/ticketspage/map.png" alt=""></div>
-   </section>
-
+</article>
  </MainLayout
 >
 
