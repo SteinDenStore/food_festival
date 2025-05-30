@@ -3,9 +3,13 @@ const {image="" , text="" } = Astro.props;
 ---
 
 <!-- mobile version -->
-<button class=" bg-orange-100 focus:bg-orange-500 focus:fill-current text-xs text-orange-500 focus:text-white font-bold rounded-3xl w-25 h-25 
-flex flex-col gap-2 justify-center items-center">
-    <img src={image} class="max-h-[30px] mx-auto">
+<button class=
+"flex flex-col gap-2 justify-center items-center rounded-2xl lg:rounded-3xl 
+w-21 h-21 lg:w-25 lg:h-25 text-xs font-bold duration-200 ease-in-out
+bg-orange-100 text-orange-500  
+hover:bg-orange-500 hover:text-white
+focus:bg-orange-500 focus:text-white focus:fill-current ">
+    <img src={image} class="max-h-6 lg:max-h-[30px] mx-auto">
     <span>{text}</span>
 </button>
 

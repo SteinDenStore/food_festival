@@ -5,6 +5,7 @@ import Link from "../components/Link.astro";
 import TextBody from "../components/TextBody.astro";
 import TextHeading from "../components/TextHeading.astro";
 import FilterTab from "../components/FilterTab.astro";
+import ListElement from "../components/ListElement.astro";
 
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
@@ -79,29 +80,158 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <!-- start program section -->
     <section>
-     <div class="flex gap-4 my-10">
-        <FilterTab
-          image="/program/icons/stands.svg"
-          text="Stands">
-        </FilterTab>
+     <div x-data="{ aktiv: 'stands' }">
+       <div class="flex gap-4 my-10 overflow-x-scroll">
+          <div @click="aktiv = 'stands'">
+            <FilterTab
+              image="/program/icons/stands.svg"
+              text="Stands">
+            </FilterTab>
+          </div>
+  
+         <div @click="aktiv = 'events'">
+            <FilterTab
+              image="/program/icons/events.svg"
+              text="Events">
+            </FilterTab>
+         </div>
+  
+          <div @click="aktiv = 'activities'">
+            <FilterTab
+              image="/program/icons/activities.svg"
+              text="Activities">
+            </FilterTab>
+          </div>
+  
+          <div @click="aktiv = 'map'">
+            <FilterTab
+              image="/program/icons/map.svg"
+              text="Map">
+            </FilterTab>
+          </div>
+       </div>
+  
+        <div class="mb-4 lg:mb-12">
+          <TextHeading htmlheading="h3" size="h1" stylingclasses="font-heading font-bold mb-4">Featured events</TextHeading>
+        </div>
+        <div class="px-8 py-6 bg-orange-100 rounded-lg mb-8 lg:mb-8 lg:rounded-3xl">
+          <div class="lg:flex lg:gap-5 hidden">
+            <Button>Friday - 5/9</Button>
+            <Button>Saturday - 6/9</Button>
+            <Button>Sunday - 7/9</Button>
+          </div>
+          <div class="flex gap-5 lg:hidden">
+            <Button size="tiny">Fri - 5/9</Button>
+            <Button size="tiny">Sat - 6/9</Button>
+            <Button size="tiny">Sun - 7/9</Button>
+          </div>
 
-        <FilterTab
-          image="/program/icons/events.svg"
-          text="Events">
-        </FilterTab>
+          <!-- stands section -->
+          <div x-show="aktiv === 'stands'" x-transition.duration.300ms>
+            <ListElement
+              url="/program"
+              image="/events/cocktail.png"
+              imagealt="cocktail_event"
+              title="Warpigs"
+              location="Dining Hall"
+            ></ListElement>
+            
+            <ListElement
+              url="/program"
+              image="/events/cocktail.png"
+              imagealt="cocktail_event"
+              title="Charm"
+              location="Dining Hall"
+            ></ListElement>
 
-        <FilterTab
-          image="/program/icons/activities.svg"
-          text="Activities">
-        </FilterTab>
+            <ListElement
+              url="/program"
+              image="/events/cocktail.png"
+              imagealt="cocktail_event"
+              title="Pizza Boys"
+              location="Dining Hall"
+            ></ListElement>
 
-        <FilterTab
-          image="/program/icons/map.svg"
-          text="Map">
-        </FilterTab>
+            <ListElement
+              url="/program"
+              image="/events/cocktail.png"
+              imagealt="cocktail_event"
+              title="Socios"
+              location="Dining Hall"
+            ></ListElement>
+
+            <ListElement
+              url="/program"
+              image="/events/cocktail.png"
+              imagealt="cocktail_event"
+              title="Charm"
+              location="Dining Hall"
+            ></ListElement>
+
+            <ListElement
+              url="/program"
+              image="/events/cocktail.png"
+              imagealt="cocktail_event"
+              title="Lakelands"
+              location="Dining Hall"
+            ></ListElement>
+
+            <ListElement
+              url="/program"
+              image="/events/cocktail.png"
+              imagealt="cocktail_event"
+              title="Nordic Drops"
+              location="Dining Hall"
+            ></ListElement>
+
+            <ListElement
+              url="/program"
+              image="/events/cocktail.png"
+              imagealt="cocktail_event"
+              title="Food Festival Bars"
+              location="Dining Hall"
+            ></ListElement>
+          </div>
+
+          <!-- events section -->
+          <div x-show="aktiv === 'events'" x-transition.duration.300ms>
+            <ListElement
+              url="/program"
+              image="/events/cocktail.png"
+              imagealt="cocktail_event"
+              title="Cocktail of the Year"
+              text="For the third year in a row, Food Festival invites six of Denmark's best winemakers and distilleries to a festive competition to create the best new cocktail."
+              location="Guild Hall"
+              time="Saturday 18:00 - 20:00"
+            ></ListElement>
+    
+            <ListElement
+              url="/program"
+              image="/events/grill.png"
+              imagealt="grill_event"
+              title="DM in Grill"
+              text="The competition will be fierce when the Food Festival will find Denmark's best grill champion when 19 teams compete for the honorable title 'Danish Grill Champion'."
+              location="Dining Hall"
+              time="Saturday 10:00 - 19:00"
+              time2="Sunday 10:00 - 17:00"
+            ></ListElement>
+    
+            <ListElement
+              url="/program"
+              image="/events/hotdog.png"
+              imagealt="hotdog_event"
+              title="Hotdog DM 2024"
+              text="Welcome to Denmark's wildest display of gastronomic creativity! 12 of the country's most inventive restaurants compete to serve the best reinterpretation of the national classic."
+              location="The Entrepreneurship"
+              time="Sunday 12.00 - 16.00"
+            ></ListElement>
+          </div>
+        </div>
      </div>
     </section>
 <!-- end program section -->
+
+<!--  -->
 
 
 

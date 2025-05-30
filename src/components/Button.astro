@@ -3,7 +3,7 @@
 const { variant= "primary", size = "medium" } = Astro.props; 
  
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
-const buttonStyling = "btn my-2 px-[24px] py-[10px] font-body font-bold"; 
+const buttonStyling = "btn my-2  font-body font-bold"; 
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 const variantClasses = {
@@ -16,7 +16,7 @@ const variantClasses = {
 const sizeClasses = {
 "large": "px-[24px] py-[10px] text-lg",
 "small": "px-[24px] py-[8px] text-sm",
-"tiny": "px-[24px] py-[4px] text-[10px]"
+"tiny": "px-[20px] py-[4px] text-[10px]"
 };
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
