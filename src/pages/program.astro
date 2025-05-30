@@ -2,20 +2,109 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import TextBody from "../components/TextBody.astro";
+import TextHeading from "../components/TextHeading.astro";
+import FilterTab from "../components/FilterTab.astro";
+
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-    <Image src={thumbsup} alt="" />
+  <article class="max-w-[352px] lg:max-w-[1260px] mx-auto [&_section]">
+<!-- start heading section -->
+    <section>
+        <div class="relative rounded-lg lg:rounded-3xl overflow-hidden h-48 md:h-64"> <!-- what is the md:h-64 ? -->
+          <img
+            src="/aboutUs/dish1.jpg"
+            alt="About us dish"
+            class="w-full h-full object-cover brightness-50"
+          />
+          <TextHeading
+            htmlheading="h1"
+            size="h2 lg:h1"
+            stylingclasses="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl font-bold font-heading drop-shadow-md text-white"
+          >
+            Program
+          </TextHeading>
+        </div>
+    </section>
+<!-- end heading section -->
+    
+<!-- start text area -->
+    <section class="lg:flex gap-20">
+      <div class="lg:max-w-98 lg:mr-auto">
+        <TextHeading
+          htmlheading="h2"
+          size="h4"
+          stylingclasses="font-heading font-bold mt-10 mb-4">
+          Food Festival offers three days of food experiences and inspiration for everyone at Tangkrogen in Aarhus.
+        </TextHeading>
+      </div>
+
+      <div class="lg:max-w-[675px]">
+        <TextHeading
+          htmlheading="h2"
+          size="h4"
+          stylingclasses="font-heading font-bold mt-10">
+          Stands
+        </TextHeading>
+        <p class="font-body ">
+          More than 200 stands are ready with tastings and activities in all eight festival areas. Food experiences are in full swing throughout the opening hours on all three days. Stop by each one whenever you feel like it.
+        </p>
+  
+        <TextHeading
+          htmlheading="h2"
+          size="h4"
+          stylingclasses="font-heading font-bold mt-10">
+          Activities
+        </TextHeading>
+        <p class="font-body ">
+          Every day the Food Festival offers free workshops, show kitchens, talks, cook-alongs, communal meals and much more.
+        </p>
+  
+        <TextHeading
+          htmlheading="h2"
+          size="h4"
+          stylingclasses="font-heading font-bold mt-10">
+          Events
+        </TextHeading>
+        <p class="font-body">
+          Don't miss the festival's big events where we celebrate good taste! Hotdog DM, Cocktail of the Year, DM in Grill.
+        </p>
+      </div>
+    </section>
+<!-- end text area -->
+
+
+<!-- start program section -->
+    <section>
+     <div class="flex gap-4 my-10">
+        <FilterTab
+          image="/program/icons/stands.svg"
+          text="Stands">
+        </FilterTab>
+
+        <FilterTab
+          image="/program/icons/events.svg"
+          text="Events">
+        </FilterTab>
+
+        <FilterTab
+          image="/program/icons/activities.svg"
+          text="Activities">
+        </FilterTab>
+
+        <FilterTab
+          image="/program/icons/map.svg"
+          text="Map">
+        </FilterTab>
+     </div>
+    </section>
+<!-- end program section -->
+
+
+
   </article>
 </MainLayout>
 <script>
