@@ -80,18 +80,12 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <!-- start program section -->
     <section>
-     <div x-data="{ aktiv: 'stands' }">
+     <div x-data="{ aktiv: 'events' }">
        <div class="flex gap-4 my-10 overflow-x-scroll">
-          <div @click="aktiv = 'stands'">
-            <FilterTab
-              image="/program/icons/stands.svg"
-              text="Stands">
-            </FilterTab>
-          </div>
   
          <div @click="aktiv = 'events'">
             <FilterTab
-              image="/program/icons/events.svg"
+              image="/program/icons/events-white.svg"
               text="Events">
             </FilterTab>
          </div>
@@ -100,6 +94,13 @@ import thumbsup from "../assets/images/thumbsup.png";
             <FilterTab
               image="/program/icons/activities.svg"
               text="Activities">
+            </FilterTab>
+          </div>
+
+          <div @click="aktiv = 'stands'">
+            <FilterTab
+              image="/program/icons/stands.svg"
+              text="Stands">
             </FilterTab>
           </div>
   
@@ -111,83 +112,66 @@ import thumbsup from "../assets/images/thumbsup.png";
           </div>
        </div>
   
-        <div class="mb-4 lg:mb-12">
+        <!-- <div class="mb-4 lg:mb-12">
           <TextHeading htmlheading="h3" size="h1" stylingclasses="font-heading font-bold mb-4">Featured events</TextHeading>
-        </div>
+        </div> -->
+
         <div class="px-8 py-6 bg-orange-100 rounded-lg mb-8 lg:mb-8 lg:rounded-3xl">
-          <div class="lg:flex lg:gap-5 hidden">
-            <Button>Friday - 5/9</Button>
-            <Button>Saturday - 6/9</Button>
-            <Button>Sunday - 7/9</Button>
-          </div>
-          <div class="flex gap-5 lg:hidden">
-            <Button size="tiny">Fri - 5/9</Button>
-            <Button size="tiny">Sat - 6/9</Button>
-            <Button size="tiny">Sun - 7/9</Button>
-          </div>
 
           <!-- stands section -->
           <div x-show="aktiv === 'stands'" x-transition.duration.300ms>
             <ListElement
               url="/program"
-              image="/events/cocktail.png"
-              imagealt="cocktail_event"
+              image="/program/stands/warpigs.webp"
+              imagealt="warpigs"
               title="Warpigs"
               location="Dining Hall"
             ></ListElement>
             
             <ListElement
               url="/program"
-              image="/events/cocktail.png"
-              imagealt="cocktail_event"
+              image="/program/stands/charm.webp"
+              imagealt="charm"
               title="Charm"
               location="Dining Hall"
             ></ListElement>
 
             <ListElement
               url="/program"
-              image="/events/cocktail.png"
-              imagealt="cocktail_event"
+              image="/program/stands/pizzaboys.webp"
+              imagealt="pizza boys"
               title="Pizza Boys"
               location="Dining Hall"
             ></ListElement>
 
             <ListElement
               url="/program"
-              image="/events/cocktail.png"
-              imagealt="cocktail_event"
+              image="/program/stands/soci.webp"
+              imagealt="socios"
               title="Socios"
               location="Dining Hall"
             ></ListElement>
 
             <ListElement
               url="/program"
-              image="/events/cocktail.png"
-              imagealt="cocktail_event"
-              title="Charm"
-              location="Dining Hall"
-            ></ListElement>
-
-            <ListElement
-              url="/program"
-              image="/events/cocktail.png"
-              imagealt="cocktail_event"
+              image="/program/stands/lakeland.webp"
+              imagealt="lakelands"
               title="Lakelands"
               location="Dining Hall"
             ></ListElement>
 
             <ListElement
               url="/program"
-              image="/events/cocktail.png"
-              imagealt="cocktail_event"
+              image="/program/stands/nordic-drops.webp"
+              imagealt="nordic drops"
               title="Nordic Drops"
               location="Dining Hall"
             ></ListElement>
 
             <ListElement
               url="/program"
-              image="/events/cocktail.png"
-              imagealt="cocktail_event"
+              image="/program/stands/foodfestbars.webp"
+              imagealt="food festival bars"
               title="Food Festival Bars"
               location="Dining Hall"
             ></ListElement>
@@ -225,6 +209,150 @@ import thumbsup from "../assets/images/thumbsup.png";
               location="The Entrepreneurship"
               time="Sunday 12.00 - 16.00"
             ></ListElement>
+          </div>
+
+          <!-- activities section -->
+          <div x-show="aktiv === 'activities'" x-transition.duration.300ms>
+            
+            <div class="lg:flex lg:gap-5 hidden">
+              <a href="#friday"><Button>Friday - 5/9 </Button></a>
+              <a href="#saturday"><Button>Saturday - 6/9 </Button></a>
+              <a href="#sunday"><Button>Sunday - 7/9 </Button></a>
+            </div>
+            <div class="flex gap-5 lg:hidden">
+              <a href="#friday"><Button size="tiny">Fri - 5/9 </Button></a>
+              <a href="#saturday"><Button size="tiny">Sat - 6/9 </Button></a>
+              <a href="#sunday"><Button size="tiny">Sun - 7/9 </Button></a>
+            </div>
+            <div id="friday">
+              <TextHeading
+                htmlheading="h2"
+                size="h3"
+                stylingclasses="font-heading font-bold my-12">
+                Friday 5. September
+              </TextHeading>
+            </div>
+            <ListElement
+              url="/program"
+              image="/program/activities/creampuffs.webp"
+              imagealt="cocktail_event"
+              title="Fresh cream puffs from scratch"
+              text="Stop by Torvet and join us when delicious cream puffs are made from scratch. Nicolai Chokolade invites you inside and hands out a few samples."
+              location="The Square"
+              time="13:00 - 16:00"
+            ></ListElement>
+    
+            <ListElement
+              url="/program"
+              image="/program/activities/icecream.webp"
+              imagealt="grill_event"
+              title="Meatpacking District Ice Cream"
+              text="Come and taste 2 different kinds of ice cream made with Unika's fresh ingredients. Fresh and exciting flavors await you."
+              location="Food & Kids"
+              time="14:00 - 16:00"
+            ></ListElement>
+    
+            <ListElement
+              url="/program"
+              image="/program/activities/cheese.webp"
+              imagealt="hotdog_event"
+              title="Unique cheese tasting"
+              text="Cheese date on 4 different Arla Unika cheeses, 15 min. duration. Dive into a world of cheeses and find your favorite in record time."
+              location="The Entrepreneurship"
+              time="16.00 - 17.00"
+            ></ListElement>
+
+            <div id="saturday">
+              <TextHeading
+                htmlheading="h2"
+                size="h3"
+                stylingclasses="font-heading font-bold my-12">
+                Saturday 6. September
+              </TextHeading>
+            </div>
+            <ListElement
+              url="/program"
+              image="/program/activities/creampuffs.webp"
+              imagealt="cocktail_event"
+              title="Fresh cream puffs from scratch"
+              text="Stop by Torvet and join us when delicious cream puffs are made from scratch. Nicolai Chokolade invites you inside and hands out a few samples."
+              location="The Square"
+              time="13:00 - 16:00"
+            ></ListElement>
+    
+            <ListElement
+              url="/program"
+              image="/program/activities/icecream.webp"
+              imagealt="grill_event"
+              title="Meatpacking District Ice Cream"
+              text="Come and taste 2 different kinds of ice cream made with Unika's fresh ingredients. Fresh and exciting flavors await you."
+              location="Food & Kids"
+              time="14:00 - 16:00"
+            ></ListElement>
+    
+            <ListElement
+              url="/program"
+              image="/program/activities/cheese.webp"
+              imagealt="hotdog_event"
+              title="Unique cheese tasting"
+              text="Cheese date on 4 different Arla Unika cheeses, 15 min. duration. Dive into a world of cheeses and find your favorite in record time."
+              location="The Entrepreneurship"
+              time="16.00 - 17.00"
+            ></ListElement>
+
+            <div id="sunday">
+              <TextHeading
+                htmlheading="h2"
+                size="h3"
+                stylingclasses="font-heading font-bold my-12">
+                Sunday 7. September
+              </TextHeading>
+            </div>
+            <ListElement
+              url="/program"
+              image="/program/activities/creampuffs.webp"
+              imagealt="cocktail_event"
+              title="Fresh cream puffs from scratch"
+              text="Stop by Torvet and join us when delicious cream puffs are made from scratch. Nicolai Chokolade invites you inside and hands out a few samples."
+              location="The Square"
+              time="13:00 - 16:00"
+            ></ListElement>
+    
+            <ListElement
+              url="/program"
+              image="/program/activities/icecream.webp"
+              imagealt="grill_event"
+              title="Meatpacking District Ice Cream"
+              text="Come and taste 2 different kinds of ice cream made with Unika's fresh ingredients. Fresh and exciting flavors await you."
+              location="Food & Kids"
+              time="14:00 - 16:00"
+            ></ListElement>
+    
+            <ListElement
+              url="/program"
+              image="/program/activities/cheese.webp"
+              imagealt="hotdog_event"
+              title="Unique cheese tasting"
+              text="Cheese date on 4 different Arla Unika cheeses, 15 min. duration. Dive into a world of cheeses and find your favorite in record time."
+              location="The Entrepreneurship"
+              time="16.00 - 17.00"
+            ></ListElement>
+          </div>
+
+          <!-- map section -->
+          <div x-show="aktiv === 'map'" x-transition.duration.300ms>
+            <TextHeading
+              htmlheading="h2"
+              size="h2"
+              stylingclasses="font-heading font-bold mb-4">
+              Festival Map
+            </TextHeading>
+            <p class="lg:max-w-[510px] my-4">
+              Explore everything the festival has to offer! Check out the festival map and plan your perfect day. View and download the festival map so you don't miss a single bite or event.
+            </p>
+            <a href="/program/map.webp" target="_blank"><Button>View map in full size</Button></a>
+            <img src="/program/map.webp" alt="map"
+            class="rounded-lg lg:rounded-3xl my-8 max-w-full">
           </div>
         </div>
      </div>
