@@ -2,37 +2,14 @@
 const {image="" , text="" } = Astro.props;
 ---
 
-<!-- mobile version -->
+
 <button class=
 "flex flex-col gap-2 justify-center items-center rounded-2xl lg:rounded-3xl 
-w-19 h-19 lg:w-25 lg:h-25 text-xs font-bold duration-200 ease-in-out
+w-16 h-16 lg:w-25 lg:h-25 text-xs font-bold duration-200 ease-in-out
+focus:outline-2 focus:outline-offset-4 focus:outline-orange-500 m-1 lg:m-2
 bg-orange-100 text-orange-500  
 hover:bg-orange-500 hover:text-white
 focus:bg-orange-500 focus:text-white focus:fill-current ">
     <img src={image} class="max-h-6 lg:max-h-[30px] mx-auto">
     <span>{text}</span>
 </button>
-
-<!-- desktop version -->
-
-
-
-<!-- <style>
-    h4 {
-        font-size: 14px;
-    }
-
-    p {
-        font-size: 12px;
-    }
-
-    @media (min-width: 1024px) {
-        h4 {
-        font-size: 28px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-    }
-</style> -->

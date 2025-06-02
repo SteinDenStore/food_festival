@@ -11,10 +11,10 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
-<MainLayout title="Titel">
-  <article class="max-w-[352px] lg:max-w-[1260px] mx-auto [&_section]">
+<MainLayout title="Program">
+  <article class="max-w-[352px] lg:max-w-[1260px] mx-auto [&_section]:mt-40">
 <!-- start heading section -->
-    <section>
+    <>
         <div class="relative rounded-lg lg:rounded-3xl overflow-hidden h-48 md:h-64"> <!-- what is the md:h-64 ? -->
           <img
             src="/aboutUs/dish1.jpg"
@@ -29,11 +29,11 @@ import thumbsup from "../assets/images/thumbsup.png";
             Program
           </TextHeading>
         </div>
-    </section>
+    </>
 <!-- end heading section -->
     
 <!-- start text area -->
-    <section class="lg:flex gap-20">
+    <section class="lg:flex gap-20 text-[#00415F]">
       <div class="lg:max-w-98 lg:mr-auto">
         <TextHeading
           htmlheading="h2"
@@ -111,12 +111,8 @@ import thumbsup from "../assets/images/thumbsup.png";
             </FilterTab>
           </div>
        </div>
-  
-        <!-- <div class="mb-4 lg:mb-12">
-          <TextHeading htmlheading="h3" size="h1" stylingclasses="font-heading font-bold mb-4">Featured events</TextHeading>
-        </div> -->
 
-        <div class="px-8 py-6 bg-orange-100 rounded-lg mb-8 lg:mb-8 lg:rounded-3xl">
+        <div class="px-8 py-6 bg-orange-100 rounded-lg mb-8 lg:mb-8 lg:rounded-3xl text-[#00415F]">
 
           <!-- stands section -->
           <div x-show="aktiv === 'stands'" x-transition.duration.300ms>
@@ -215,14 +211,14 @@ import thumbsup from "../assets/images/thumbsup.png";
           <div x-show="aktiv === 'activities'" x-transition.duration.300ms>
             
             <div class="lg:flex lg:gap-5 hidden">
-              <a href="#friday"><Button>Friday - 5/9 </Button></a>
-              <a href="#saturday"><Button>Saturday - 6/9 </Button></a>
-              <a href="#sunday"><Button>Sunday - 7/9 </Button></a>
+              <a href="#friday"><Button variant="secondary">Friday - 5/9 </Button></a>
+              <a href="#saturday"><Button variant="secondary">Saturday - 6/9 </Button></a>
+              <a href="#sunday"><Button variant="secondary">Sunday - 7/9 </Button></a>
             </div>
             <div class="flex gap-5 lg:hidden">
-              <a href="#friday"><Button size="tiny">Fri - 5/9 </Button></a>
-              <a href="#saturday"><Button size="tiny">Sat - 6/9 </Button></a>
-              <a href="#sunday"><Button size="tiny">Sun - 7/9 </Button></a>
+              <a href="#friday"><Button size="tiny" variant="secondary">Fri - 5/9 </Button></a>
+              <a href="#saturday"><Button size="tiny" variant="secondary">Sat - 6/9 </Button></a>
+              <a href="#sunday"><Button size="tiny" variant="secondary">Sun - 7/9 </Button></a>
             </div>
             <div id="friday">
               <TextHeading

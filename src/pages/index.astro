@@ -3,24 +3,27 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import ListElement from "../components/ListElement.astro";
 import TextHeading from "../components/TextHeading.astro";
+import Ticket from "../components/Ticket.astro";
 
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
-<MainLayout title="Home">
+<MainLayout title="Food Festival">
 
-  <article class="[&_section]:mt-50 text-[#00415F]">
+  <article class="[&_section]:mt-20 lg:[&_section]:mt-40 text-[#00415F]">
     <!-- [&_h1]:font-heading [&_h2]:font-heading [&_h3]:font-heading [&_h4]:font-heading [&_p]:font-body -->
 
   <!-- start food banner -->
-    <section class="overflow-x-hidden max-w-screen grid grid-rows-1 grid-cols-1 ">
+    <div class="overflow-x-hidden max-w-screen grid grid-rows-1 grid-cols-1 ">
 
-      <div class="col-start-1 row-start-1 row-span-1 col-span-1">
+      <div class="col-start-1 row-start-1 row-span-1 col-span-1 
+      [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-30 lg:[&_img]:max-w-50">
+
         <div class="container col-start-1 row-start-1 row-span-1 col-span-1">
           <div class="whitespace-nowrap">
-            <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60">
+            <div class="inline-block animate-food-scroll-left whitespace-nowrap">
                 <div class="flex gap-4">
                   <img src="/herofood/food1.webp" alt="">
                   <img src="/herofood/food2.webp" alt="">
@@ -29,7 +32,7 @@ import thumbsup from "../assets/images/thumbsup.png";
                   <img src="/herofood/food5.webp" alt="">
                 </div>
             </div>
-            <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60" aria-hidden="true">
+            <div class="inline-block animate-food-scroll-left whitespace-nowrap" aria-hidden="true">
                 <div class="flex gap-4">
                   <img src="/herofood/food1.webp" alt="">
                   <img src="/herofood/food2.webp" alt="">
@@ -41,7 +44,7 @@ import thumbsup from "../assets/images/thumbsup.png";
           </div>
     
           <div class="whitespace-nowrap">
-              <div class="inline-block animate-food-scroll-right whitespace-nowrap [&_img]:mx-10 [&_img]:my-10 [&_img]:max-w-60">
+              <div class="inline-block animate-food-scroll-right whitespace-nowrap">
                   <div class="flex gap-4">
                     <img src="/herofood/food6.webp" alt="">
                     <img src="/herofood/food7.webp" alt="">
@@ -50,7 +53,7 @@ import thumbsup from "../assets/images/thumbsup.png";
                     <img src="/herofood/food10.webp" alt="">
                   </div>
               </div>
-              <div class="inline-block animate-food-scroll-right whitespace-nowrap [&_img]:mx-10 [&_img]:my-10 [&_img]:max-w-60" aria-hidden="true">
+              <div class="inline-block animate-food-scroll-right whitespace-nowrap" aria-hidden="true">
                   <div class="flex gap-4">
                     <img src="/herofood/food6.webp" alt="">
                     <img src="/herofood/food7.webp" alt="">
@@ -62,7 +65,7 @@ import thumbsup from "../assets/images/thumbsup.png";
           </div>
   
           <div class="whitespace-nowrap">
-              <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60">
+              <div class="inline-block animate-food-scroll-left whitespace-nowrap ">
                   <div class="flex gap-4">
                     <img src="/herofood/food11.webp" alt="">
                     <img src="/herofood/food12.webp" alt="">
@@ -71,7 +74,7 @@ import thumbsup from "../assets/images/thumbsup.png";
                     <img src="/herofood/food4.webp" alt="">
                   </div>
               </div>
-              <div class="inline-block animate-food-scroll-left whitespace-nowrap [&_img]:mx-10 [&_img]:my-4 [&_img]:max-w-60" aria-hidden="true">
+              <div class="inline-block animate-food-scroll-left whitespace-nowrap " aria-hidden="true">
                   <div class="flex gap-4">
                     <img src="/herofood/food11.webp" alt="">
                     <img src="/herofood/food12.webp" alt="">
@@ -85,24 +88,24 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
 
       <div class="col-start-1 row-start-1 row-span-1 col-span-1 my-auto z-1">
-      <div class="cta mx-auto my-auto place-content-center text-center col-start-1 row-start-1 row-span-1 col-span-1 w-88 h-88 lg:w-167 lg:h-167 rounded-full bg-green-900">
+      <div class="cta mx-auto my-auto place-content-center text-center col-start-1 row-start-1 row-span-1 col-span-1 w-88 h-88 lg:w-160 lg:h-160 rounded-full bg-green-900">
         <h1 class="font-body font-bold text-sm lg:text-2xl text-white">Welcome to</h1>
         <h2 class="font-heading my-4 text-2xl lg:text-6xl font-bold text-white">Denmark's <br> largest annual <br> food celebration</h2>
         <h3 class="font-body font-bold text-lg lg:text-2xl text-white">September 5 - 7, 2025 <br> at Tangkrogen in Aarhus</h3>
         <div class="flex justify-center gap-4 mt:4 lg:hidden">
-          <Button size="tiny">Get tickets</Button>
-          <Button size="tiny">View program</Button>
+          <a href="/tickets"><Button size="tiny">Get tickets</Button></a>
+          <a href="/tickets"><Button size="tiny" >View program</Button></a>
         </div>
         <div class="lg:flex justify-center lg:gap-8 lg:mt-6 hidden">
-          <Button size="large">Get tickets</Button>
-          <Button size="large">View program</Button>
+          <a href="/program"><Button size="large">Get tickets</Button></a>
+          <a href="/program"><Button size="large" variant="secondary">View program</Button></a>
         </div>
       </div>
     </div>
 
     
 
-    </section>
+  </div>
   <!-- end food banner -->
 
   <!-- start banner -->
@@ -149,7 +152,22 @@ import thumbsup from "../assets/images/thumbsup.png";
         <TextHeading htmlheading="h3" size="h1" stylingclasses="font-heading font-bold">Tickets</TextHeading>
         <p class="font-body lg:text-center max-w-120 my-4">The ticket gives access to the entire festival site. So eat your way through 7 festival areas, take part in a host of free workshops, free show kitchens and much more!</p>
       </div>
-      <!-- TICKET COMPONENTS GOES HERE -->
+      <div class="flex gap-12 lg:gap-20 flex-wrap justify-center mt-12">
+        <Ticket
+          title="Day Ticket"
+          subtext="5. / 6. / 7. September, 2025"
+          line1="✦ 110 kr Standard"
+          line2="✦ 80 kr Early bird, pensioner/student"
+          line3="✦ Free for children up to the age of 10"
+        ></Ticket>
+        <Ticket
+          title="Weekend Tickets"
+          subtext="5 -7 September, 2025"
+          line1="✦ 170 kr Standard"
+          line2="✦ 130 kr Early bird, pensioner/student"
+          line3="✦ Free for children up to the age of 10"
+        ></Ticket>
+      </div>
     </section>
     <!-- end tickets -->
     

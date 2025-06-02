@@ -1,0 +1,21 @@
+---
+import Button from "../components/Button.astro";
+import TextHeading from "./TextHeading.astro";
+
+const { title="", subtext="", line1="", line2="", line3="" } = Astro.props;
+---
+
+<div class="w-[352px] text-white rounded-3xl overflow-hidden">
+    <div class="h-[140px] bg-[#00707B] flex flex-col items-center justify-center">
+        <TextHeading htmlheading="h1" size="h3" stylingclasses="font-heading font-bold ">{title}</TextHeading>
+        <span class="font-body">{subtext}</span>
+    </div>
+    <div class="h-[280px]  bg-[#00415F] font-body flex flex-col gap-4 justify-center items-center [&_p]:my-1">
+        <div class="justify-left">
+            <p>{line1}</p>
+            <p>{line2}</p>
+            <p>{line3}</p>
+        </div>
+        <a href="/tickets"><Button>Buy tickets ➜</Button></a>
+    </div>
+</div>
